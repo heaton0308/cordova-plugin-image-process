@@ -1,9 +1,9 @@
 {
-  "name": "cordova-plugin-imageedit",
+  "name": "cordova-plugin-image-process",
   "version": "1.0.0",
-  "description": "imageedit",
+  "description": "imageprocess",
   "cordova": {
-    "id": "cordova-plugin-imageedit",
+    "id": "cordova-plugin-image-process",
     "platforms": [
       "android"
     ]
@@ -14,7 +14,7 @@
   },
   "keywords": [
     "cordova",
-    "imageedit"
+    "imageprocess"
   ],
   "author": "Jiang Long Su",
   "license": "Apache 2.0"

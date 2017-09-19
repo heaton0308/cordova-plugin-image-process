@@ -1,6 +1,6 @@
 var exec = require("cordova/exec");
 var ImageEdit = {};
-ImageEdit.imageedit = function(successCallback, errorCallback, args) {
-  exec(successCallback, errorCallback, "ImageEdit", "imageedit", args);
+ImageEdit.imageprocess = function (successCallback, errorCallback, args) {
+    exec(successCallback, errorCallback, "ImageProcess", "openCamera", args);
 };
 module.exports = ImageEdit;
