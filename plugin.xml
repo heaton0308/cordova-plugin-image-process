@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-imageedit" version="1.0.0">
+    <name>ImageEdit</name>
+    <description>Cordova ImageEdit Plugin</description>
+    <license>Apache 2.0</license>
+    <keywords>cordova,imageedit</keywords>
+    <issue></issue>
+    <js-module src="www/ImageEdit.js" name="ImageEdit">
+        <clobbers target="cordova.plugin.ImageEdit"/>
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ImageEdit">
+                <param name="android-package" value="imagecrop.kevin.com.myapplication3.ImageEdit"/>
+                <param name="onload" value="true"/>
+            </feature>
+        </config-file>
+        <config-file target="AndroidManifest.xml" parent="/manifest/application">
+            <activity android:name="com.qxcloud.imageprocess.activity.TakePhoteActivity"
+                      android:label="@string/app_name" android:screenOrientation="portrait"
+                      android:launchMode="singleTop">
+                <intent-filter>
+                    <action android:name="com.qxcloud.imageprocess.activity.TakePhoteActivity"/>
+                    <category android:name="android.intent.category.DEFAULT"/>
+                </intent-filter>
+            </activity>
+        </config-file>
+
+        <source-file src="src/android/xml/activity_take_phote.xml" target-dir="res/layout"/>
+
+        <source-file src="src/android/ImageEdit.java" target-dir="src/imagecrop/kevin/com/myapplication3"/>
+        <source-file src="src/android/CameraUtils.java" target-dir="src/imagecrop/kevin/com/myapplication3"/>
+        <source-file src="src/android/CameraPreview.java" target-dir="src/imagecrop/kevin/com/myapplication3"/>
+        <source-file src="src/android/FocusView.java" target-dir="src/imagecrop/kevin/com/myapplication3"/>
+        <source-file src="src/android/ReferenceLine.java" target-dir="src/imagecrop/kevin/com/myapplication3"/>
+        <source-file src="src/android/TakePhoteActivity.java" target-dir="src/imagecrop/kevin/com/myapplication3"/>
+        <!--res资源文件-->
+        <source-file src="src/android/drawable/flash_lamp_style.xml" target-dir="res/drawable"/>
+        <source-file src="src/android/drawable/ic_close_selector.xml" target-dir="res/drawable"/>
+        <source-file src="src/android/drawable/ic_takephoto_selector.xml" target-dir="res/drawable"/>
+        <source-file src="src/android/drawable/takepic_btn_close_normal.png" target-dir="res/drawable"/>
+        <source-file src="src/android/drawable/takepic_btn_lightoff.png" target-dir="res/drawable"/>
+        <source-file src="src/android/drawable/takepic_btn_lighton.png" target-dir="res/drawable"/>
+        <source-file src="src/android/drawable/takepic_btn_open_pre.png" target-dir="res/drawable"/>
+        <source-file src="src/android/drawable/takepic_btn_takepic_normal.png" target-dir="res/drawable"/>
+        <source-file src="src/android/drawable/takepic_btn_takepic_pre.png" target-dir="res/drawable"/>
+        <!--values-->
+        <source-file src="src/android/values/colors.xml" target-dir="res/values"/>
+        <source-file src="src/android/values/styles.xml" target-dir="res/values"/>
+    </platform>
+</plugin>

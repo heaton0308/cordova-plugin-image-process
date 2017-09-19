@@ -1,0 +1,5 @@
+<resources>
+    <style name="flash_lamp_theme" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/flash_lamp_style</item>
+    </style>
+</resources>

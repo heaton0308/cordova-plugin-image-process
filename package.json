@@ -1,0 +1,21 @@
+{
+  "name": "cordova-plugin-imageedit",
+  "version": "1.0.0",
+  "description": "imageedit",
+  "cordova": {
+    "id": "cordova-plugin-imageedit",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "cordova",
+    "imageedit"
+  ],
+  "author": "Jiang Long Su",
+  "license": "Apache 2.0"
+}
