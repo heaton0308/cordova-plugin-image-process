@@ -8,7 +8,8 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.SurfaceHolder;
 
-import com.qxcloud.imageprocess.R;
+//import com.qxcloud.imageprocess.R;
+import io.ionic.starter.R;
 
 public class CameraGLSurfaceView extends GLSurfaceView {
 
