@@ -443,6 +443,11 @@
         <source-file src="src/android/libs/armeabi-v7a/libopencv_video.a" target-dir="libs/armeabi-v7a"/>
         <source-file src="src/android/libs/armeabi-v7a/libopencv_videoio.a" target-dir="libs/armeabi-v7a"/>
         <source-file src="src/android/libs/armeabi-v7a/libopencv_videostab.a" target-dir="libs/armeabi-v7a"/>
+        <!--xml-->
+        <source-file src="src/android/xml/activity_editimg_view.xml" target-dir="res/layout"/>
+        <source-file src="src/android/xml/activity_main.xml" target-dir="res/layout"/>
+        <source-file src="src/android/xml/activity_take_photo.xml" target-dir="res/layout"/>
+        <source-file src="src/android/xml/crop_image_view.xml" target-dir="res/layout"/>
 
 
     </platform>
