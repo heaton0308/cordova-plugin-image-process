@@ -11,6 +11,9 @@
             <feature name="ImageProcess">
                 <param name="android-package" value="com.qxcloud.imageprocess.ImageProcess"/>
             </feature>
+            <feature name="ImageProcess">
+                <param name="ios-package" value="ImageProcess" />
+            </feature>
         </config-file>
         <config-file parent="/*" target="AndroidManifest.xml">
             <uses-permission android:name="android.permission.CAMERA"/>

@@ -1,28 +1,141 @@
-/********* cordova-plugin-image-process.m Cordova Plugin Implementation *******/
+//
+//  TestPlugin.m
+//  HelloWorld
+//
+//  Created by xiaobai on 17/9/14.
+//
+//
 
-#import <Cordova/CDV.h>
+#import "ImageProcess.h"
+#import <AVFoundation/AVFoundation.h>
+#import <ImageIO/ImageIO.h>
+#import <objc/message.h>
 
-@interface cordova-plugin-image-process : CDVPlugin {
-  // Member variables go here.
+@implementation ImageProcess
+
+-(void)openCamera:(CDVInvokedUrlCommand *)command
+{
+    self.callbackId = [NSString stringWithFormat:@"%@",command.callbackId];
+
+    if ([self showCameraVc]) {
+        //进入相机
+        UINavigationController *nav=[[UINavigationController alloc]init];
+        
+        CameraViewController *viewC = [[CameraViewController alloc]init];
+        
+        viewC.delegate = self;
+        
+        [nav addChildViewController:viewC];
+        
+        [self.viewController presentViewController:nav animated:YES completion:nil];
+    }else{
+        CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"暂无权限"];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:self.callbackId];
+    }
+    
+    
 }
 
-- (void)coolMethod:(CDVInvokedUrlCommand*)command;
-@end
-
-@implementation cordova-plugin-image-process
-
-- (void)coolMethod:(CDVInvokedUrlCommand*)command
+-(void)openCrop:(CDVInvokedUrlCommand *)command
 {
-    CDVPluginResult* pluginResult = nil;
-    NSString* echo = [command.arguments objectAtIndex:0];
+    self.callbackId = [NSString stringWithFormat:@"%@",command.callbackId];
 
-    if (echo != nil && [echo length] > 0) {
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:echo];
-    } else {
-        pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR];
+    NSString *a = [command.arguments[1] substringFromIndex:6];
+    
+    UIImage *image = [UIImage imageWithContentsOfFile:a];
+    //直接进入裁剪
+    UINavigationController *nav=[[UINavigationController alloc]init];
+    
+    ClipViewController *viewC = [[ClipViewController alloc]init];
+    
+    viewC.image = image;
+    
+    viewC.flog = 10086;
+    
+    viewC.delegate = self;
+    
+    [nav addChildViewController:viewC];
+    
+    [self.viewController presentViewController:nav animated:YES completion:nil];
+}
+    
+-(void)savePhotoPath:(NSString *)imagePath{
+    [self dismissView:imagePath];
+}
+
+-(void)dismissView:(NSString *)path
+{
+    if (path == nil || path.length == 0 || [path isKindOfClass:[NSNull class]]) {
+        path = [NSString stringWithFormat:@"0"];
+        CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:path];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:self.callbackId];
+    }else{
+        CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:path];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:self.callbackId];
+    }
+}
+
+-(void)dismissViewComtroller:(NSString *)path
+{
+    [self dismissView:path];
+}
+
+-(void)openAlbum:(CDVInvokedUrlCommand *)command
+{
+    self.callbackId = [NSString stringWithFormat:@"%@",command.callbackId];
+    
+    if ([self showPickerVc]) {
+        NSLog(@"进入相册");
+        UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
+        imagePickerController.delegate = self;
+        imagePickerController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+        imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+        [self.viewController presentViewController:imagePickerController animated:YES completion:nil];
+    }else{
+        CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"暂无相册权限"];
+        [self.commandDelegate sendPluginResult:pluginResult callbackId:self.callbackId];
+    }
+}
+
+//该代理方法仅适用于只选取图片时
+- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingImage:(UIImage *)image editingInfo:(nullable NSDictionary<NSString *,id> *)editingInfo {
+    NSLog(@"选择完毕----image:%@-----info:%@",image,editingInfo);
+    [self.viewController dismissViewControllerAnimated:YES completion:nil];
+    
+    //直接进入裁剪
+    UINavigationController *nav=[[UINavigationController alloc]init];
+    
+    ClipViewController *viewC = [[ClipViewController alloc]init];
+    
+    viewC.image = image;
+    
+    viewC.flog = 10086;
+    
+    viewC.delegate = self;
+    
+    [nav addChildViewController:viewC];
+    
+    [self.viewController presentViewController:nav animated:YES completion:nil];
+    
+}
+
+-(int)showCameraVc{
+    AVAuthorizationStatus authStatus =  [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    if(authStatus == AVAuthorizationStatusRestricted || authStatus ==AVAuthorizationStatusDenied){
+        return 0;
+    }else{
+        return 1;
     }
 
-    [self.commandDelegate sendPluginResult:pluginResult callbackId:command.callbackId];
+}
+
+- (int)showPickerVc{
+    AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    if(status == AVAuthorizationStatusDenied){
+        return 0;
+    }else{
+        return 1;
+    }
 }
 
 @end
