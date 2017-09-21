@@ -1,21 +1,19 @@
 {
   "name": "cordova-plugin-image-process",
   "version": "1.0.0",
-  "description": "imageprocess",
+  "description": "自定义相机相册选图后图片二值处理组件",
   "cordova": {
-    "id": "cordova-plugin-image-process",
+    "id": "com.qxcloud.imageprocess",
     "platforms": [
-      "android"
+      "android",
+      "ios"
     ]
   },
-  "repository": {
-    "type": "git",
-    "url": ""
-  },
   "keywords": [
-    "cordova",
-    "imageprocess"
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios"
   ],
-  "author": "Jiang Long Su",
-  "license": "Apache 2.0"
+  "author": "",
+  "license": "ISC"
 }

@@ -2,10 +2,468 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59df2590-fc3e-45f1-8240-c8053584d711" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-hdpi/crop_button.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-hdpi/marquee_btn_back_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-hdpi/marquee_btn_back_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-hdpi/marquee_btn_back_prebtn_rotate_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-hdpi/marquee_btn_back_prebtn_rotate_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-hdpi/marquee_btn_ok_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-hdpi/marquee_btn_ok_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-hdpi/takepic_btn_close_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-hdpi/takepic_btn_lightoff.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-hdpi/takepic_btn_lighton.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-hdpi/takepic_btn_open_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-hdpi/takepic_btn_takepic_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-hdpi/takepic_btn_takepic_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-mdpi/adjust_btn_save_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-mdpi/adjust_btn_save_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-mdpi/marquee_btn_back_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-mdpi/marquee_btn_back_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-mdpi/marquee_btn_back_prebtn_rotate_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-mdpi/marquee_btn_back_prebtn_rotate_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-mdpi/marquee_btn_ok_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-mdpi/marquee_btn_ok_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-mdpi/takepic_btn_close_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-mdpi/takepic_btn_lightoff.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-mdpi/takepic_btn_lighton.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-mdpi/takepic_btn_open_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-mdpi/takepic_btn_takepic_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-mdpi/takepic_btn_takepic_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xhdpi/marquee_btn_back_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xhdpi/marquee_btn_back_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xhdpi/marquee_btn_back_prebtn_rotate_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xhdpi/marquee_btn_back_prebtn_rotate_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xhdpi/marquee_btn_ok_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xhdpi/marquee_btn_ok_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xhdpi/takepic_btn_close_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xhdpi/takepic_btn_lightoff.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xhdpi/takepic_btn_lighton.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xhdpi/takepic_btn_open_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xhdpi/takepic_btn_takepic_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xhdpi/takepic_btn_takepic_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xxhdpi/marquee_btn_back_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xxhdpi/marquee_btn_back_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xxhdpi/marquee_btn_back_prebtn_rotate_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xxhdpi/marquee_btn_back_prebtn_rotate_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xxhdpi/marquee_btn_ok_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xxhdpi/marquee_btn_ok_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xxhdpi/takepic_btn_close_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xxhdpi/takepic_btn_lightoff.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xxhdpi/takepic_btn_lighton.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xxhdpi/takepic_btn_open_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xxhdpi/takepic_btn_takepic_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xxhdpi/takepic_btn_takepic_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xxxhdpi/marquee_btn_back_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xxxhdpi/marquee_btn_back_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xxxhdpi/marquee_btn_back_prebtn_rotate_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xxxhdpi/marquee_btn_back_prebtn_rotate_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xxxhdpi/marquee_btn_ok_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xxxhdpi/marquee_btn_ok_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xxxhdpi/takepic_btn_close_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xxxhdpi/takepic_btn_lightoff.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xxxhdpi/takepic_btn_lighton.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xxxhdpi/takepic_btn_open_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xxxhdpi/takepic_btn_takepic_normal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable-xxxhdpi/takepic_btn_takepic_pre.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/ImageProcess.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/ResourceUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/ToastUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/activity/BitmapTransfer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/activity/CropImgActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/activity/TakePhotoActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/crop/AspectRatioUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/crop/CenterHandleHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/crop/CornerHandleHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/crop/CropImageType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/crop/CropImageView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/crop/CropOverlayView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/crop/Edge.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/crop/EdgePair.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/crop/Handle.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/crop/HandleHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/crop/HandleUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/crop/HorizontalHandleHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/crop/ImageViewUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/crop/PaintUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/crop/VerticalHandleHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/editAPI/EditImageAPI.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/editAPI/EditImageMessage.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/editAPI/EditImgInterface.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/operate/CameraView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/operate/FocusView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/operate/JavaCameraView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/operate/ReferenceLine.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/utils/CameraHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/utils/CameraUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/utils/FileUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/utils/ImageUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/utils/LittleUtil.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/utils/Logger.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/utils/MyBitmapFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/utils/OpenCVUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/utils/PhotoUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/com/qxcloud/imageprocess/utils/URIUtils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/android/AsyncServiceHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/android/BaseLoaderCallback.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/android/Camera2Renderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/android/CameraBridgeViewBase.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/android/CameraGLRendererBase.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/android/CameraGLSurfaceView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/android/CameraRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/android/FpsMeter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/android/InstallCallbackInterface.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/android/JavaCameraView.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/android/LoaderCallbackInterface.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/android/OpenCVLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/android/StaticHelper.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/android/Utils.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/calib3d/Calib3d.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/calib3d/StereoBM.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/calib3d/StereoMatcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/calib3d/StereoSGBM.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/Algorithm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/Core.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/CvException.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/CvType.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/DMatch.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/KeyPoint.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/Mat.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/MatOfByte.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/MatOfDMatch.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/MatOfDouble.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/MatOfFloat.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/MatOfFloat4.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/MatOfFloat6.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/MatOfInt.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/MatOfInt4.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/MatOfKeyPoint.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/MatOfPoint.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/MatOfPoint2f.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/MatOfPoint3.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/MatOfPoint3f.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/MatOfRect.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/MatOfRect2d.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/Point.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/Point3.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/Range.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/Rect.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/Rect2d.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/RotatedRect.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/Scalar.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/Size.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/TermCriteria.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/core/TickMeter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/dnn/DictValue.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/dnn/Dnn.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/dnn/Importer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/dnn/Layer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/dnn/Net.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/features2d/AKAZE.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/features2d/AgastFeatureDetector.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/features2d/BFMatcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/features2d/BOWImgDescriptorExtractor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/features2d/BOWKMeansTrainer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/features2d/BOWTrainer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/features2d/BRISK.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/features2d/DescriptorExtractor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/features2d/DescriptorMatcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/features2d/FastFeatureDetector.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/features2d/Feature2D.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/features2d/FeatureDetector.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/features2d/Features2d.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/features2d/FlannBasedMatcher.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/features2d/GFTTDetector.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/features2d/KAZE.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/features2d/MSER.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/features2d/ORB.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/features2d/Params.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/imgcodecs/Imgcodecs.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/imgproc/CLAHE.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/imgproc/Imgproc.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/imgproc/LineSegmentDetector.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/imgproc/Moments.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/imgproc/Subdiv2D.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/ml/ANN_MLP.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/ml/Boost.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/ml/DTrees.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/ml/EM.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/ml/KNearest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/ml/LogisticRegression.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/ml/Ml.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/ml/NormalBayesClassifier.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/ml/ParamGrid.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/ml/RTrees.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/ml/SVM.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/ml/SVMSGD.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/ml/StatModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/ml/TrainData.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/objdetect/BaseCascadeClassifier.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/objdetect/CascadeClassifier.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/objdetect/HOGDescriptor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/objdetect/Objdetect.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/osgi/OpenCVInterface.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/osgi/OpenCVNativeLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/photo/AlignExposures.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/photo/AlignMTB.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/photo/CalibrateCRF.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/photo/CalibrateDebevec.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/photo/CalibrateRobertson.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/photo/MergeDebevec.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/photo/MergeExposures.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/photo/MergeMertens.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/photo/MergeRobertson.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/photo/Photo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/photo/Tonemap.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/photo/TonemapDrago.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/photo/TonemapDurand.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/photo/TonemapMantiuk.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/photo/TonemapReinhard.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/utils/Converters.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/video/BackgroundSubtractor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/video/BackgroundSubtractorKNN.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/video/BackgroundSubtractorMOG2.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/video/DenseOpticalFlow.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/video/DualTVL1OpticalFlow.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/video/FarnebackOpticalFlow.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/video/KalmanFilter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/video/SparseOpticalFlow.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/video/SparsePyrLKOpticalFlow.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/video/Video.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/videoio/VideoCapture.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/videoio/VideoWriter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/org/opencv/videoio/Videoio.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable/flash_lamp_style.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable/ic_close_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable/ic_flashlight_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable/ic_left_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable/ic_marquee_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable/ic_rotate_selector.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/drawable/ic_takephoto_btn.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/layout/activity_editimg_view.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/layout/activity_take_photo.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/layout/crop_image_view.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/values/attrs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/values/colors.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/android/res/values/styles.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/ImageProcess.m" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/ImageProcess.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-hdpi/crop_button.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-hdpi/marquee_btn_back_normal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-hdpi/marquee_btn_back_pre.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-hdpi/marquee_btn_back_prebtn_rotate_normal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-hdpi/marquee_btn_back_prebtn_rotate_pre.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-hdpi/marquee_btn_ok_normal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-hdpi/marquee_btn_ok_pre.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-hdpi/takepic_btn_close_normal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-hdpi/takepic_btn_lightoff.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-hdpi/takepic_btn_lighton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-hdpi/takepic_btn_open_pre.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-hdpi/takepic_btn_takepic_normal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-hdpi/takepic_btn_takepic_pre.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-hdpi/text_circle_one.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-hdpi/unbackg.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-hdpi/undo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-mdpi/adjust_btn_save_normal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-mdpi/adjust_btn_save_pre.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-mdpi/marquee_btn_back_normal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-mdpi/marquee_btn_back_pre.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-mdpi/marquee_btn_back_prebtn_rotate_normal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-mdpi/marquee_btn_back_prebtn_rotate_pre.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-mdpi/marquee_btn_ok_normal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-mdpi/marquee_btn_ok_pre.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-mdpi/takepic_btn_close_normal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-mdpi/takepic_btn_lightoff.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-mdpi/takepic_btn_lighton.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-mdpi/takepic_btn_open_pre.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-mdpi/takepic_btn_takepic_normal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable-mdpi/takepic_btn_takepic_pre.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable/flash_lamp_style.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable/ic_close_selector.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable/ic_flashlight_selector.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable/ic_left_selector.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable/ic_marquee_selector.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable/ic_rotate_selector.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/drawable/ic_takephoto_btn.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/ImageProcess.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/MainActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/ResourceUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/ToastUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/activity/BitmapTransfer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/activity/CropImgActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/activity/TakePhotoActivity.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/crop/AspectRatioUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/crop/CenterHandleHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/crop/CornerHandleHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/crop/CropImageType.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/crop/CropImageView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/crop/CropOverlayView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/crop/Edge.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/crop/EdgePair.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/crop/Handle.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/crop/HandleHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/crop/HandleUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/crop/HorizontalHandleHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/crop/ImageViewUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/crop/PaintUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/crop/VerticalHandleHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/editAPI/EditImageAPI.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/editAPI/EditImageMessage.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/editAPI/EditImgInterface.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/operate/CameraView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/operate/FocusView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/operate/JavaCameraView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/operate/ReferenceLine.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/utils/CameraHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/utils/CameraUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/utils/FileUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/utils/ImageUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/utils/LittleUtil.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/utils/Logger.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/utils/MyBitmapFactory.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/utils/OpenCVUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/utils/PhotoUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/utils/URIUtils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/android/AsyncServiceHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/android/BaseLoaderCallback.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/android/Camera2Renderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/android/CameraBridgeViewBase.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/android/CameraGLRendererBase.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/android/CameraGLSurfaceView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/android/CameraRenderer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/android/FpsMeter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/android/InstallCallbackInterface.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/android/JavaCameraView.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/android/LoaderCallbackInterface.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/android/OpenCVLoader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/android/StaticHelper.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/android/Utils.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/calib3d/Calib3d.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/calib3d/StereoBM.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/calib3d/StereoMatcher.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/calib3d/StereoSGBM.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/Algorithm.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/Core.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/CvException.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/CvType.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/DMatch.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/KeyPoint.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/Mat.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/MatOfByte.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/MatOfDMatch.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/MatOfDouble.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/MatOfFloat.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/MatOfFloat4.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/MatOfFloat6.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/MatOfInt.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/MatOfInt4.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/MatOfKeyPoint.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/MatOfPoint.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/MatOfPoint2f.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/MatOfPoint3.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/MatOfPoint3f.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/MatOfRect.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/MatOfRect2d.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/Point.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/Point3.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/Range.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/Rect.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/Rect2d.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/RotatedRect.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/Scalar.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/Size.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/TermCriteria.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/core/TickMeter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/dnn/DictValue.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/dnn/Dnn.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/dnn/Importer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/dnn/Layer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/dnn/Net.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/features2d/AKAZE.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/features2d/AgastFeatureDetector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/features2d/BFMatcher.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/features2d/BOWImgDescriptorExtractor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/features2d/BOWKMeansTrainer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/features2d/BOWTrainer.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/features2d/BRISK.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/features2d/DescriptorExtractor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/features2d/DescriptorMatcher.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/features2d/FastFeatureDetector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/features2d/Feature2D.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/features2d/FeatureDetector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/features2d/Features2d.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/features2d/FlannBasedMatcher.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/features2d/GFTTDetector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/features2d/KAZE.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/features2d/MSER.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/features2d/ORB.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/features2d/Params.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/imgcodecs/Imgcodecs.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/imgproc/CLAHE.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/imgproc/Imgproc.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/imgproc/LineSegmentDetector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/imgproc/Moments.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/imgproc/Subdiv2D.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/ml/ANN_MLP.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/ml/Boost.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/ml/DTrees.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/ml/EM.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/ml/KNearest.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/ml/LogisticRegression.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/ml/Ml.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/ml/NormalBayesClassifier.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/ml/ParamGrid.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/ml/RTrees.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/ml/SVM.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/ml/SVMSGD.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/ml/StatModel.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/ml/TrainData.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/objdetect/BaseCascadeClassifier.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/objdetect/CascadeClassifier.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/objdetect/HOGDescriptor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/objdetect/Objdetect.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/osgi/OpenCVInterface.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/osgi/OpenCVNativeLoader.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/photo/AlignExposures.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/photo/AlignMTB.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/photo/CalibrateCRF.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/photo/CalibrateDebevec.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/photo/CalibrateRobertson.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/photo/MergeDebevec.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/photo/MergeExposures.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/photo/MergeMertens.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/photo/MergeRobertson.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/photo/Photo.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/photo/Tonemap.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/photo/TonemapDrago.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/photo/TonemapDurand.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/photo/TonemapMantiuk.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/photo/TonemapReinhard.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/utils/Converters.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/video/BackgroundSubtractor.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/video/BackgroundSubtractorKNN.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/video/BackgroundSubtractorMOG2.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/video/DenseOpticalFlow.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/video/DualTVL1OpticalFlow.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/video/FarnebackOpticalFlow.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/video/KalmanFilter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/video/SparseOpticalFlow.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/video/SparsePyrLKOpticalFlow.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/video/Video.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/videoio/VideoCapture.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/videoio/VideoWriter.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/java/org/opencv/videoio/Videoio.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/values/attrs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/values/colors.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/values/styles.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/xml/activity_editimg_view.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/xml/activity_main.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/xml/activity_take_photo.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/android/xml/crop_image_view.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/www/ImageEdit.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugin.xml" afterPath="$PROJECT_DIR$/plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/MainActivity.java" afterPath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/MainActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/editAPI/EditImageAPI.java" afterPath="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/editAPI/EditImageAPI.java" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,103 +475,30 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="cordova-plugin-image-process" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ImageProcess.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/ImageProcess.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="85" column="22" lean-forward="false" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugin.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="11" column="61" lean-forward="false" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
+            <state relative-caret-position="228">
+              <caret line="111" column="70" lean-forward="true" selection-start-line="111" selection-start-column="70" selection-end-line="111" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageEdit.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/www/ImageEdit.js">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="50">
-              <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Algorithm.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/android/java/org/opencv/core/Algorithm.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AsyncServiceHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/android/java/org/opencv/android/AsyncServiceHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EditImageAPI.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/editAPI/EditImageAPI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="18" column="88" lean-forward="false" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CameraGLSurfaceView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/android/java/org/opencv/android/CameraGLSurfaceView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AspectRatioUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/crop/AspectRatioUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Calib3d.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/android/java/org/opencv/calib3d/Calib3d.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="26" />
+            <state relative-caret-position="19">
+              <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -139,11 +524,11 @@
         <option value="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/activity/BitmapTransfer.java" />
         <option value="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/ImageProcess.java" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/plugin.xml" />
         <option value="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/editAPI/EditImageAPI.java" />
         <option value="$PROJECT_DIR$/src/android/java/org/opencv/android/CameraGLSurfaceView.java" />
         <option value="$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/MainActivity.java" />
         <option value="$PROJECT_DIR$/www/ImageEdit.js" />
+        <option value="$PROJECT_DIR$/plugin.xml" />
       </list>
     </option>
   </component>
@@ -153,11 +538,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1924" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="192" />
+    <option name="y" value="94" />
+    <option name="width" value="1475" />
+    <option name="height" value="940" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -174,30 +559,36 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
-          <expand>
-            <path>
-              <item name="cordova-plugin-image-process" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cordova-plugin-image-process" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cordova-plugin-image-process" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cordova-plugin-image-process" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cordova-plugin-image-process" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cordova-plugin-image-process" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="android" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cordova-plugin-image-process" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cordova-plugin-image-process" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cordova-plugin-image-process" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cordova-plugin-image-process" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -206,14 +597,16 @@
     <property name="nodejs_interpreter_path" value="D:/nodejs/node" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="E:\cordova-plugin-image-process\src\android\xml" />
       <recent name="E:\cordova-plugin-image-process\src\android" />
       <recent name="E:\cordova-plugin-image-process\src\android\drawable" />
       <recent name="E:\cordova-plugin-image-process\src\android\values" />
-      <recent name="E:\cordova-plugin-image-process\src\android\imageprocess\activity" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -227,6 +620,72 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="BashConfigurationType" factoryName="Bash">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -242,35 +701,39 @@
       <workItem from="1505871328524" duration="1388000" />
       <workItem from="1505875383821" duration="6438000" />
       <workItem from="1505891505502" duration="5282000" />
+      <workItem from="1505964002733" duration="7000" />
+      <workItem from="1505978362194" duration="544000" />
+      <workItem from="1505987015626" duration="354000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="21992000" />
+    <option name="totallyTimeSpent" value="22897000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="192" y="94" width="1475" height="940" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973656" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3146998" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3297062" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3746988" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="processedProjectFiles" value="true" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -280,6 +743,166 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/ImageProcess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="85" column="22" lean-forward="false" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="61" lean-forward="false" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/ImageEdit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/android/java/org/opencv/core/Algorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/android/java/org/opencv/android/AsyncServiceHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/editAPI/EditImageAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="88" lean-forward="false" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/android/java/org/opencv/android/CameraGLSurfaceView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/crop/AspectRatioUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/android/java/org/opencv/calib3d/Calib3d.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/ImageProcess.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="85" column="22" lean-forward="false" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="61" lean-forward="false" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/www/ImageEdit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/android/java/org/opencv/core/Algorithm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/android/java/org/opencv/android/AsyncServiceHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/editAPI/EditImageAPI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="88" lean-forward="false" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/android/java/org/opencv/android/CameraGLSurfaceView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/crop/AspectRatioUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/android/java/org/opencv/calib3d/Calib3d.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/ImageProcess.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -292,7 +915,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="4" column="0" lean-forward="false" selection-start-line="0" selection-start-column="25" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -384,7 +1006,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -392,7 +1013,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -400,7 +1020,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
           <caret line="2" column="3" lean-forward="false" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -408,13 +1027,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="41" lean-forward="false" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/crop/AspectRatioUtil.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
+        <state relative-caret-position="247">
           <caret line="13" column="37" lean-forward="false" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="37" />
           <folding />
         </state>
@@ -430,7 +1048,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/android/java/org/opencv/calib3d/Calib3d.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
+        <state relative-caret-position="76">
           <caret line="4" column="26" lean-forward="false" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="26" />
           <folding />
         </state>
@@ -446,7 +1064,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/editAPI/EditImageAPI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
+        <state relative-caret-position="342">
           <caret line="18" column="88" lean-forward="false" selection-start-line="18" selection-start-column="88" selection-end-line="18" selection-end-column="88" />
           <folding />
         </state>
@@ -454,7 +1072,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/android/java/org/opencv/android/CameraGLSurfaceView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="228">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
@@ -462,7 +1080,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
+        <state relative-caret-position="342">
           <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
           <folding />
         </state>
@@ -470,24 +1088,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/ImageProcess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
+        <state relative-caret-position="1615">
           <caret line="85" column="22" lean-forward="false" selection-start-line="85" selection-start-column="12" selection-end-line="85" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/plugin.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="61" lean-forward="false" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/www/ImageEdit.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="22" lean-forward="false" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="22" />
+        <state relative-caret-position="133">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugin.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="111" column="70" lean-forward="true" selection-start-line="111" selection-start-column="70" selection-end-line="111" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="5" lean-forward="true" selection-start-line="1" selection-start-column="5" selection-end-line="1" selection-end-column="5" />
           <folding />
         </state>
       </provider>
