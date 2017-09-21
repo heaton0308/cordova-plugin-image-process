@@ -16,6 +16,8 @@ import com.qxcloud.imageprocess.utils.URIUtils;
 
 import static android.content.Intent.ACTION_PICK;
 
+import io.ionic.starter.R;
+
 public class MainActivity extends Activity {
 
     private static final String ACTION_CAMERA = "com.qxcloud.imageprocess.activity.TakePhotoActivity";

@@ -16,7 +16,7 @@ public class EditImageAPI {
      * GeneralUtil 实例
      */
     private static EditImageAPI singletonGeneralUtil = null;
-   private static ArrayList<EditImgInterface> arrayList = new ArrayList<>();
+   private static ArrayList<EditImgInterface> arrayList = new ArrayList<EditImgInterface>();
 
     /**
      * 单例模式
