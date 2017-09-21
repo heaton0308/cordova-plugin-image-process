@@ -1,237 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59df2590-fc3e-45f1-8240-c8053584d711" name="Default" comment="android 版本完成">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/adjust_btn_eraser_normal@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/adjust_btn_eraser_normal@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/adjust_btn_eraser_selected@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/adjust_btn_eraser_selected@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/adjust_btn_recall_dis@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/adjust_btn_recall_dis@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/adjust_btn_recall_normal@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/adjust_btn_recall_normal@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/adjust_btn_save_normal@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/adjust_btn_save_normal@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/adjust_btn_save_pre@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/adjust_btn_save_pre@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/btn_bg_normal@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/btn_bg_normal@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/btn_bg_selected@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/btn_bg_selected@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/marquee_btn_back_normal@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/marquee_btn_back_normal@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/marquee_btn_back_pre@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/marquee_btn_back_pre@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/marquee_btn_back_prebtn_rotate_normal@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/marquee_btn_back_prebtn_rotate_normal@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/marquee_btn_back_prebtn_rotate_pre@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/marquee_btn_back_prebtn_rotate_pre@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/marquee_btn_ok_normal@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/marquee_btn_ok_normal@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/marquee_btn_ok_pre@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/marquee_btn_ok_pre@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/marquee_btn_retake_normal@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/marquee_btn_retake_normal@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/marquee_btn_retake_pre@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/marquee_btn_retake_pre@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/takepic_btn_lightoff@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/takepic_btn_lightoff@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/takepic_btn_lighton1@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/takepic_btn_lighton1@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/takepic_btn_lighton@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/takepic_btn_lighton@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/takepic_btn_normal@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/takepic_btn_normal@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/takepic_btn_pre@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/takepic_btn_pre@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/takepic_btn_takepic_normal@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/takepic_btn_takepic_normal@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/takepic_btn_takepic_pre@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/takepic_btn_takepic_pre@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/takepic_btn_关闭_normal@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/takepic_btn_关闭_normal@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/takepic_btn_关闭_pre@2x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/myCsmeraimage/takepic_btn_关闭_pre@3x.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Headers" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Resources" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/opencv2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/Current" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/opencv2" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/ImageProcess.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/BYFCameraProcessHeader.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/CustomizeCamera/CameraViewController.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/CustomizeCamera/CameraViewController.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/KVNELoading/KVNProgress.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/KVNELoading/KVNProgress.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/KVNELoading/KVNProgressView.xib" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/KVNELoading/UIImage+KVNEmpty.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/KVNELoading/UIImage+KVNEmpty.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/KVNELoading/UIImage+KVNImageEffects.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/KVNELoading/UIImage+KVNImageEffects.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/MyCameraCropper/ClipViewController.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/MyCameraCropper/ClipViewController.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/MyCameraCropper/TKImageView.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/MyCameraCropper/TKImageView.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/OpencvProcess.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/OpencvProcess.mm" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/UIImage+Rotate.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/UIImage+Rotate.m" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/calib3d.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/calib3d/calib3d.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/calib3d/calib3d_c.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/affine.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/base.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/bufferpool.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/core.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/core_c.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/cuda.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/cuda.inl.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/cuda_stream_accessor.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/cuda_types.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/cvdef.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/cvstd.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/cvstd.inl.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/directx.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/eigen.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/ippasync.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/mat.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/mat.inl.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/matx.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/ocl.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/ocl_genbase.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/opengl.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/operations.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/optim.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/persistence.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/private.cuda.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/private.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/ptr.inl.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/sse_utils.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/traits.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/types.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/types_c.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/utility.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/version.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/core/wimage.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/cvconfig.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/features2d.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/features2d/features2d.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/all_indices.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/allocator.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/any.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/autotuned_index.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/composite_index.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/config.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/defines.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/dist.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/dummy.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/dynamic_bitset.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/flann.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/flann_base.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/general.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/ground_truth.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/hdf5.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/heap.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/hierarchical_clustering_index.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/index_testing.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/kdtree_index.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/kdtree_single_index.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/kmeans_index.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/linear_index.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/logger.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/lsh_index.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/lsh_table.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/matrix.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/miniflann.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/nn_index.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/object_factory.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/params.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/random.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/result_set.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/sampling.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/saving.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/simplex_downhill.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/flann/timer.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/hal.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/hal/defs.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/hal/intrin.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/hal/intrin_cpp.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/hal/intrin_neon.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/hal/intrin_sse.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/highgui.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/highgui/highgui.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/highgui/highgui_c.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/imgcodecs.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/imgcodecs/imgcodecs.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/imgcodecs/imgcodecs_c.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/imgcodecs/ios.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/imgproc.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/imgproc/imgproc.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/imgproc/imgproc_c.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/imgproc/types_c.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/ml.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/ml/ml.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/objdetect.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/objdetect/detection_based_tracker.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/objdetect/objdetect.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/objdetect/objdetect_c.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/opencv.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/opencv_modules.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/photo.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/photo/cuda.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/photo/photo.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/photo/photo_c.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/shape.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/shape/emdL1.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/shape/hist_cost.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/shape/shape.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/shape/shape_distance.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/shape/shape_transformer.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/stitching.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/stitching/detail/autocalib.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/stitching/detail/blenders.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/stitching/detail/camera.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/stitching/detail/exposure_compensate.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/stitching/detail/matchers.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/stitching/detail/motion_estimators.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/stitching/detail/seam_finders.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/stitching/detail/timelapsers.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/stitching/detail/util.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/stitching/detail/util_inl.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/stitching/detail/warpers.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/stitching/detail/warpers_inl.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/stitching/warpers.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/video.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/video/background_segm.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/video/tracking.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/video/tracking_c.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/video/video.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/videoio.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/videoio/cap_ios.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/videoio/videoio.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/videoio/videoio_c.h" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/videostab.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/videostab/deblurring.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/videostab/fast_marching.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/videostab/fast_marching_inl.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/videostab/frame_source.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/videostab/global_motion.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/videostab/inpainting.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/videostab/log.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/videostab/motion_core.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/videostab/motion_stabilizing.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/videostab/optical_flow.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/videostab/outlier_rejection.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/videostab/ring_buffer.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/videostab/stabilizer.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/videostab/wobble_suppression.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Headers/world.hpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ios/MyCamera/opencv2.framework/Versions/A/Resources/Info.plist" />
+    <list default="true" id="59df2590-fc3e-45f1-8240-c8053584d711" name="Default" comment="iOS 版本完成">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugin.xml" afterPath="$PROJECT_DIR$/plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ios/ImageProcess.m" afterPath="$PROJECT_DIR$/src/ios/ImageProcess.m" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -285,8 +56,8 @@
       <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plugin.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+            <state relative-caret-position="85">
+              <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -557,7 +328,7 @@
       <workItem from="1505987015626" duration="416000" />
       <workItem from="1505987727065" duration="59000" />
       <workItem from="1505987789663" duration="1076000" />
-      <workItem from="1505990867122" duration="1104000" />
+      <workItem from="1505990867122" duration="1149000" />
     </task>
     <task id="LOCAL-00001" summary="android 版本完成">
       <created>1505987594599</created>
@@ -573,11 +344,18 @@
       <option name="project" value="LOCAL" />
       <updated>1505987899987</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="iOS 版本完成">
+      <created>1505992090238</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1505992090238</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25198000" />
+    <option name="totallyTimeSpent" value="25243000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="79" y="87" width="1475" height="940" extended-state="0" />
@@ -609,7 +387,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="android 版本完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="android 版本完成" />
+    <MESSAGE value="iOS 版本完成" />
+    <option name="LAST_COMMIT_MESSAGE" value="iOS 版本完成" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -742,8 +521,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="51" lean-forward="false" selection-start-line="14" selection-start-column="51" selection-end-line="14" selection-end-column="51" />
+        <state relative-caret-position="85">
+          <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
           <folding />
         </state>
       </provider>
