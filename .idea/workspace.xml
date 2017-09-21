@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59df2590-fc3e-45f1-8240-c8053584d711" name="Default" comment="iOS 版本完成">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugin.xml" afterPath="$PROJECT_DIR$/plugin.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -56,8 +56,8 @@
       <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plugin.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+            <state relative-caret-position="482">
+              <caret line="687" column="22" lean-forward="true" selection-start-line="687" selection-start-column="22" selection-end-line="687" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -328,7 +328,7 @@
       <workItem from="1505987015626" duration="416000" />
       <workItem from="1505987727065" duration="59000" />
       <workItem from="1505987789663" duration="1076000" />
-      <workItem from="1505990867122" duration="1149000" />
+      <workItem from="1505990867122" duration="1215000" />
     </task>
     <task id="LOCAL-00001" summary="android 版本完成">
       <created>1505987594599</created>
@@ -355,7 +355,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25243000" />
+    <option name="totallyTimeSpent" value="25309000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="79" y="87" width="1475" height="940" extended-state="0" />
@@ -521,8 +521,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="42" lean-forward="false" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
+        <state relative-caret-position="482">
+          <caret line="687" column="22" lean-forward="true" selection-start-line="687" selection-start-column="22" selection-end-line="687" selection-end-column="22" />
           <folding />
         </state>
       </provider>
