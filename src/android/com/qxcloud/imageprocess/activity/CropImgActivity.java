@@ -14,15 +14,15 @@ import android.widget.RelativeLayout;
 
 import com.qxcloud.imageprocess.ImageProcess;
 import com.qxcloud.imageprocess.ResourceUtils;
+import com.qxcloud.imageprocess.ToastUtils;
 import com.qxcloud.imageprocess.crop.CropImageType;
 import com.qxcloud.imageprocess.crop.CropImageView;
 import com.qxcloud.imageprocess.editAPI.EditImageAPI;
 import com.qxcloud.imageprocess.editAPI.EditImageMessage;
+import com.qxcloud.imageprocess.utils.FileUtils;
 import com.qxcloud.imageprocess.utils.Logger;
 import com.qxcloud.imageprocess.utils.MyBitmapFactory;
 import com.qxcloud.imageprocess.utils.OpenCVUtils;
-
-import java.io.File;
 
 /**
  * Created by cfh on 2017-09-05.
@@ -113,27 +113,7 @@ public class CropImgActivity extends Activity implements View.OnClickListener{
         } else if (i == ResourceUtils.getIdByName(this,ResourceUtils.TYPE_ID,"tv_preservation")) {
             //确定
             handler.sendEmptyMessage(0);
-            try {
-                Bitmap bitmap = cropmageView.getCroppedImage();
-                if (bitmap != null && !bitmap.isRecycled()) {
-                    Logger.e("saved bitmap size = "+bitmap.getByteCount()/8/1024+"KB");
-                    boolean isSaved = MyBitmapFactory.saveBitmap(bitmap,savedFilePath);
-                    if(isSaved){
-                        File file = new File(savedFilePath);
-                        Logger.e("saved file size = "+file.length()/1024+"KB");
-                        handler.sendEmptyMessageDelayed(1,500);
-                        handler.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                EditImageAPI.getInstance().post(0,new EditImageMessage(0));
-                                finish();
-                            }
-                        },500);
-                    }
-                }
-            } catch (Exception e) {
-                dismissProgressDialog();
-            }
+            saveBitmapFile();
         } else if (i == ResourceUtils.getIdByName(this,ResourceUtils.TYPE_ID,"tv_rotate")) {
             cropmageView.rotateImage(-90);
         }
@@ -155,7 +135,6 @@ public class CropImgActivity extends Activity implements View.OnClickListener{
                     break;
                 case 3:
                     Bitmap bitmap = (Bitmap) msg.obj;
-                    Logger.e("init crop image size = "+bitmap.getByteCount()/8/1024+"KB");
                     cropImage(bitmap);
                     break;
                 case 4:
@@ -164,6 +143,39 @@ public class CropImgActivity extends Activity implements View.OnClickListener{
             }
         }
     };
+
+    private void saveBitmapFile(){
+        new Thread(){
+            @Override
+            public void run() {
+                try {
+                    Bitmap bitmap = cropmageView.getCroppedImage();
+                    if (bitmap != null && !bitmap.isRecycled()) {
+                        boolean isSaved = MyBitmapFactory.saveBitmap(bitmap,savedFilePath);
+                        if(isSaved){
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    handler.sendEmptyMessage(1);
+                                    EditImageAPI.getInstance().post(0,new EditImageMessage(0));
+                                    finish();
+                                }
+                            },500);
+                        }else{
+                            handler.sendEmptyMessageDelayed(1,200);
+                            ToastUtils.toastMessage(CropImgActivity.this,"文件保存失败");
+                        }
+                    }else{
+                        handler.sendEmptyMessageDelayed(1,200);
+                        ToastUtils.toastMessage(CropImgActivity.this,"图片裁剪失败");
+                    }
+                } catch (Exception e) {
+                    ToastUtils.toastMessage(CropImgActivity.this,"图片裁剪异常");
+                    handler.sendEmptyMessageDelayed(1,200);
+                }
+            }
+        }.start();
+    }
 
     private void initBitMap() {
         new Thread(new Runnable() {
@@ -174,9 +186,7 @@ public class CropImgActivity extends Activity implements View.OnClickListener{
                 if (null != originalPath && !originalPath.equals("")) {
                     try {
                         Bitmap bitmap = MyBitmapFactory.getBitmapByPath(originalPath);
-                        Logger.e("init uri compress bitmap image size = "+bitmap.getByteCount()/8/1024+"KB");
-                        bitmap = OpenCVUtils.threshold(bitmap,17,2.5D);
-                        Logger.e("init uri threshold bitmap image size = "+bitmap.getByteCount()/8/1024+"KB");
+                        bitmap = OpenCVUtils.threshold(bitmap,17,7.5D);
                         Message message = new Message();
                         message.what = 3;
                         message.obj = bitmap;
@@ -189,9 +199,8 @@ public class CropImgActivity extends Activity implements View.OnClickListener{
                     try {
                         if (null != BitmapTransfer.transferBitmapData) {
                             Bitmap bitmap = BitmapFactory.decodeByteArray(BitmapTransfer.transferBitmapData, 0, BitmapTransfer.transferBitmapData.length);
-                            Logger.e("init data compress bitmap image size = "+bitmap.getByteCount()/8/1024+"KB");
-                            bitmap = OpenCVUtils.threshold(bitmap,17,2.5D);
-                            Logger.e("init data threshold bitmap image size = "+bitmap.getByteCount()/8/1024+"KB");
+                            Logger.e("initBitmap ----- " + bitmap.getByteCount() + " w = " + bitmap.getWidth() + " h = " + bitmap.getHeight());
+                            bitmap = OpenCVUtils.threshold(bitmap,17,7.5D);
                             Message message = new Message();
                             message.what = 3;
                             message.obj = bitmap;

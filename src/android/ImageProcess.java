@@ -25,6 +25,7 @@ import org.apache.cordova.CordovaWebView;
 import org.apache.cordova.PermissionHelper;
 import org.json.JSONArray;
 import org.json.JSONException;
+import java.io.File;
 
 /**
  * CREATED BY:         heaton
@@ -188,7 +189,7 @@ public class ImageProcess extends CordovaPlugin implements EditImgInterface{
     @Override
     public void onEditImgResult(int code, EditImageMessage editImageMessage) {
         if(code == 0 && editImageMessage.getWhat() == 0){
-            callbackContext.success("file://"+Uri.parse(mSavedFilePath).toString());
+            callbackContext.success(Uri.fromFile(new File(mSavedFilePath)).toString());
         }
     }
 }

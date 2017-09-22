@@ -722,6 +722,7 @@ public class MyBitmapFactory {
             FileOutputStream fos = new FileOutputStream(file);
             fos.write(baos.toByteArray());
             fos.close();
+            Logger.e("saveBitmap size = "+file.length()/1024+"KB");
             return true;
         }catch (Exception e){
             Logger.e("saveBitmap e "+e.getMessage());
