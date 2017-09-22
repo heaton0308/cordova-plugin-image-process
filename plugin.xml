@@ -688,6 +688,8 @@
                 <param name="ios-package" value="ImageProcess" />
             </feature>
         </config-file>
+        <source-file src="src/ios/ImageProcess.h"/>
         <source-file src="src/ios/ImageProcess.m"/>
+        <source-file src="src/ios/MyCamera"/>
     </platform>
 </plugin>
