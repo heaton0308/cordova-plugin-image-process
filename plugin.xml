@@ -684,7 +684,7 @@
     <platform name="ios">
         <config-file parent="/*" target="config.xml">
             <feature name="ImageProcess">
-                <param name="ios-package" value="src/com/qxcloud/imageprocess"/>
+                <param name="ios-package" value="ImageProcess" />
             </feature>
         </config-file>
         <source-file src="src/ios/ImageProcess.m"/>
