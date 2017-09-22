@@ -7,9 +7,6 @@
 //
 
 #import "ImageProcess.h"
-#import <AVFoundation/AVFoundation.h>
-#import <ImageIO/ImageIO.h>
-#import <objc/message.h>
 
 @implementation ImageProcess
 
@@ -130,8 +127,8 @@
 }
 
 - (int)showPickerVc{
-    AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
-    if(status == AVAuthorizationStatusDenied){
+    ALAuthorizationStatus author = [ALAssetsLibrary authorizationStatus];
+    if (author == kCLAuthorizationStatusRestricted || author == kCLAuthorizationStatusDenied){
         return 0;
     }else{
         return 1;

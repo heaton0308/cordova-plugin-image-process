@@ -9,6 +9,11 @@
 #import "CameraViewController.h"
 #import "ClipViewController.h"
 #import <UIKit/UIKit.h>
+#import <AssetsLibrary/AssetsLibrary.h>
+#import <CoreLocation/CoreLocation.h>
+#import <AVFoundation/AVFoundation.h>
+#import <ImageIO/ImageIO.h>
+#import <objc/message.h>
 
 @interface ImageProcess : CDVPlugin<UIActionSheetDelegate,CameraViewDelegate,ClipPhotoDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate,UIAlertViewDelegate>
 
