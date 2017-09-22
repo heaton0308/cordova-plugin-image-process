@@ -176,6 +176,11 @@ public class ImageProcess extends CordovaPlugin implements EditImgInterface{
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         super.onActivityResult(requestCode, resultCode, intent);
+
+        if(resultCode != Activity.RESULT_OK){
+            callbackContext.error("未选择图片");
+        }
+
         if(requestCode == REQUEST_ALBUM && resultCode == Activity.RESULT_OK){
             if (intent != null) {
                 Message message = new Message();
