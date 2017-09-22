@@ -137,6 +137,7 @@ public class ImageProcess extends CordovaPlugin implements EditImgInterface{
                 exeMethod();
             }else{
                 ToastUtils.toastMessage(this.cordova.getActivity(),"请前往应用权限管理打开相机及内部存储权限");
+                this.callbackContext.error("请前往应用权限管理打开相机及内部存储权限");
             }
         }
     }
