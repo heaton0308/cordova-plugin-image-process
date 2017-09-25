@@ -2,9 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="59df2590-fc3e-45f1-8240-c8053584d711" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ios/MyCamera/KVNELoading/KVNProgress.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ios/MyCamera/KVNELoading/KVNProgress.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ios/MyCamera/KVNELoading/KVNProgressView.xib" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ios/MyCamera/KVNELoading/UIImage+KVNEmpty.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ios/MyCamera/KVNELoading/UIImage+KVNEmpty.m" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ios/MyCamera/KVNELoading/UIImage+KVNImageEffects.h" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ios/MyCamera/KVNELoading/UIImage+KVNImageEffects.m" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ios/ImageProcess.h" afterPath="$PROJECT_DIR$/src/ios/ImageProcess.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ios/ImageProcess.m" afterPath="$PROJECT_DIR$/src/ios/ImageProcess.m" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugin.xml" afterPath="$PROJECT_DIR$/plugin.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ios/MyCamera/MyCameraCropper/ClipViewController.m" afterPath="$PROJECT_DIR$/src/ios/MyCamera/MyCameraCropper/ClipViewController.m" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,8 +35,28 @@
       <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugin.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="694" column="9" lean-forward="false" selection-start-line="694" selection-start-column="9" selection-end-line="694" selection-end-column="9" />
+            <state relative-caret-position="572">
+              <caret line="705" column="59" lean-forward="false" selection-start-line="705" selection-start-column="59" selection-end-line="705" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ClipViewController.m" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ios/MyCamera/MyCameraCropper/ClipViewController.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="365">
+              <caret line="148" column="5" lean-forward="true" selection-start-line="148" selection-start-column="5" selection-end-line="148" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BYFCameraProcessHeader.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ios/MyCamera/BYFCameraProcessHeader.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -38,18 +65,28 @@
       <file leaf-file-name="ImageProcess.m" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ios/ImageProcess.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+            <state relative-caret-position="425">
+              <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageProcess.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ImageProcess.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ios/ImageProcess.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+            <state relative-caret-position="221">
+              <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -64,6 +101,7 @@
       <find>Calib3d.java</find>
       <find>android</find>
       <find>photo</find>
+      <find>KV</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -87,6 +125,7 @@
         <option value="$PROJECT_DIR$/plugin.xml" />
         <option value="$PROJECT_DIR$/src/ios/ImageProcess.m" />
         <option value="$PROJECT_DIR$/src/ios/ImageProcess.h" />
+        <option value="$PROJECT_DIR$/src/ios/MyCamera/MyCameraCropper/ClipViewController.m" />
       </list>
     </option>
   </component>
@@ -97,7 +136,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="222" />
+    <option name="x" value="179" />
     <option name="y" value="23" />
     <option name="width" value="1662" />
     <option name="height" value="1021" />
@@ -175,6 +214,84 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ios" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyCamera" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cordova-plugin-image-process" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cordova-plugin-image-process" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ios" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyCamera" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyCameraCropper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cordova-plugin-image-process" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cordova-plugin-image-process" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ios" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyCamera" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CustomizeCamera" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cordova-plugin-image-process" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cordova-plugin-image-process" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -183,7 +300,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="E:/camerastest" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path" value="D:/nodejs/node" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.JavaScript" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
@@ -302,7 +419,8 @@
       <workItem from="1506044573983" duration="4665000" />
       <workItem from="1506063731389" duration="1284000" />
       <workItem from="1506077535493" duration="293000" />
-      <workItem from="1506078422678" duration="82000" />
+      <workItem from="1506078422678" duration="669000" />
+      <workItem from="1506303233784" duration="2775000" />
     </task>
     <task id="LOCAL-00001" summary="android 版本完成">
       <created>1505987594599</created>
@@ -343,10 +461,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30716000" />
+    <option name="totallyTimeSpent" value="34078000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="222" y="23" width="1662" height="1021" extended-state="0" />
+    <frame x="179" y="23" width="1662" height="1021" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2751678" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -385,8 +503,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/MainActivity.java" />
-    <entry file="file://$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/crop/AspectRatioUtil.java" />
     <entry file="file://$PROJECT_DIR$/src/android/java/org/opencv/calib3d/Calib3d.java" />
     <entry file="file://$PROJECT_DIR$/src/android/java/com/qxcloud/imageprocess/ImageProcess.java" />
     <entry file="file://$PROJECT_DIR$/plugin.xml">
@@ -441,13 +557,6 @@
     <entry file="file://$PROJECT_DIR$/src/android/drawable/ic_takephoto_btn.xml" />
     <entry file="file://$PROJECT_DIR$/src/android/drawable/flash_lamp_style.xml" />
     <entry file="file://$PROJECT_DIR$/src/android/xml/activity_editimg_view.xml" />
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="9" column="4" lean-forward="true" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/android/java/org/opencv/android/Utils.java" />
     <entry file="file://$PROJECT_DIR$/src/android/aidl/org/opencv/engine/OpenCVEngineInterface.aidl">
       <provider selected="true" editor-type-id="text-editor">
@@ -502,26 +611,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plugin.xml">
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="694" column="9" lean-forward="false" selection-start-line="694" selection-start-column="9" selection-end-line="694" selection-end-column="9" />
+        <state relative-caret-position="153">
+          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ios/ImageProcess.m">
+    <entry file="file://$PROJECT_DIR$/plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+        <state relative-caret-position="572">
+          <caret line="705" column="59" lean-forward="false" selection-start-line="705" selection-start-column="59" selection-end-line="705" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ios/MyCamera/BYFCameraProcessHeader.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ios/ImageProcess.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="24" lean-forward="false" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+        <state relative-caret-position="221">
+          <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ios/ImageProcess.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ios/MyCamera/MyCameraCropper/ClipViewController.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="148" column="5" lean-forward="true" selection-start-line="148" selection-start-column="5" selection-end-line="148" selection-end-column="5" />
           <folding />
         </state>
       </provider>

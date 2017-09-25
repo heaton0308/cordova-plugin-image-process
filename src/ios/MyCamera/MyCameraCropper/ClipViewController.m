@@ -11,8 +11,6 @@
 #import "BYFCameraProcessHeader.h"
 #import "UIImage+Rotate.h"
 #import "OpencvProcess.h"
-#import "KVNProgress.h"
-
 
 #define SelfWidth [UIScreen mainScreen].bounds.size.width
 #define SelfHeight  [UIScreen mainScreen].bounds.size.height
@@ -22,12 +20,14 @@
     UIButton *_takeButton;
     UIButton *_orientationButton;
     UIView *_balckView;
-    
+
     UILabel *_prompt;
 }
 @property (nonatomic, assign) BOOL isClip;
 
 @property (nonatomic, strong) TKImageView *tkImageView;
+
+@property (strong, nonatomic) UIActivityIndicatorView *activityIndicator ;
 
 @end
 
@@ -37,13 +37,18 @@
     [super viewDidLoad];
 //    self.navigationController.navigationBar.hidden = YES;
     self.navigationController.navigationBarHidden = YES;
-    
+
+    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithFrame:CGRectMake(100, 100, 60, 60)];
+    [self.view addSubview:self.activityIndicator];
+    self.activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
+    [self.activityIndicator startAnimating];
+
     self.view.backgroundColor = [UIColor blackColor];
-    
+
     [self createdTkImageView];
-    
+
     [self createdTool];
-    
+
 }
 
 - (void)createdTkImageView
@@ -51,8 +56,8 @@
     _tkImageView = [[TKImageView alloc] initWithFrame:CGRectMake(0, 20, SelfWidth, SelfHeight - 120)];
     _tkImageView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:_tkImageView];
-    //需要进行裁剪的图片对象
-    _tkImageView.toCropImage = [OpencvProcess opencvProcessImage:self.image andConstValue:7.5];
+    //需要进行裁剪的图片对象//[OpencvProcess opencvProcessImage:self.image andConstValue:7.5];
+    _tkImageView.toCropImage = self.image;
     //是否显示中间线
     _tkImageView.showMidLines = YES;
     //是否需要支持缩放裁剪
@@ -75,7 +80,7 @@
     _tkImageView.initialScaleFactor = .8f;
     _tkImageView.cropAspectRatio = 0;
     _tkImageView.maskColor = [UIColor colorWithRed:0/255.0 green:0/255.0 blue:0/255.0 alpha:0.5];
-    
+
     self.isClip = NO;
 }
 
@@ -85,26 +90,26 @@
     _balckView.userInteractionEnabled = YES;
     _balckView.backgroundColor = [UIColor blackColor];
     [self.view addSubview:_balckView];
-    
+
     //旋转
     _orientationButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _orientationButton.frame = CGRectMake(MAKE.size.width - 80, 15, 60, 50);
     _orientationButton.transform = CGAffineTransformMakeRotation(M_PI/2);
     [_orientationButton addTarget:self action:@selector(orientation:) forControlEvents:UIControlEventTouchUpInside];
     _orientationButton.tag = 101;
-    
+
     UIImageView *backImage = [[UIImageView alloc]initWithFrame:CGRectMake(2, (_orientationButton.frame.size.width - 18)/2, 18, 18)];
     backImage.image = [UIImage imageNamed:@"marquee_btn_back_prebtn_rotate_normal@3x.png"];
     [_orientationButton addSubview:backImage];
-    
+
     UILabel *backLabel = [[UILabel alloc]initWithFrame:CGRectMake(backImage.frame.origin.x + backImage.frame.size.width, 0, 40, 50)];
     backLabel.text = @"旋转";
     backLabel.textColor = [UIColor whiteColor];
     backLabel.font = [UIFont systemFontOfSize:16];
     [_orientationButton addSubview:backLabel];
-    
+
     [_balckView addSubview:_orientationButton];
-    
+
     //拍照
     _takeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _takeButton.frame = CGRectMake((MAKE.size.width - 60)/2, 10, 60, 60);
@@ -113,23 +118,23 @@
     [_takeButton addTarget:self action:@selector(takePhotoAction:) forControlEvents:UIControlEventTouchUpInside];
     _takeButton.tag = 101;
     [_balckView addSubview:_takeButton];
-    
+
     //返回
     _closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     _closeButton.frame = CGRectMake(20, 15, 60, 50);
     _closeButton.transform = CGAffineTransformMakeRotation(M_PI/2);
     [_closeButton addTarget:self action:@selector(dissMissButton) forControlEvents:UIControlEventTouchUpInside];
-    
+
     UIImageView *backImage2 = [[UIImageView alloc]initWithFrame:CGRectMake(2, (_closeButton.frame.size.width - 18)/2, 18, 18)];
     backImage2.image = [UIImage imageNamed:@"marquee_btn_retake_normal.png"];
     [_closeButton addSubview:backImage2];
-    
+
     UILabel *backLabel2 = [[UILabel alloc]initWithFrame:CGRectMake(backImage2.frame.origin.x + backImage2.frame.size.width, 0, 40, 50)];
     backLabel2.text = @"重拍";
     backLabel2.textColor = [UIColor whiteColor];
     backLabel2.font = [UIFont systemFontOfSize:16];
     [_closeButton addSubview:backLabel2];
-    
+
     [_balckView addSubview:_closeButton];
 }
 
@@ -140,7 +145,7 @@
             self.image = [self.image rotate:UIImageOrientationRight];
         }
         self.image = [self.image rotate:UIImageOrientationRight];
-        _tkImageView.toCropImage = [OpencvProcess opencvProcessImage:self.image andConstValue:7.5];
+        _tkImageView.toCropImage = self.image;
     }
 }
 
@@ -159,29 +164,32 @@
 
 -(void)takePhotoAction:(UIButton *)button{
     if (button.tag == 101) {
+
+        [self.activityIndicator startAnimating];
+
         UIImage *SaveImage = [_tkImageView currentCroppedImage];
-        
+
         // 本地沙盒目录
         NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
         // 得到本地沙盒中名为"MyImage"的路径，"MyImage"是保存的图片名
-        
+
         NSDateFormatter *formater = [[NSDateFormatter alloc] init];
         formater.dateFormat = @"yyyyMMddHHmmss";
         NSString *currentTimeStr = [[formater stringFromDate:[NSDate date]] stringByAppendingFormat:@"_%d" ,arc4random_uniform(10000)];
-        
+
         NSString *imageFilePath = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.jpg",currentTimeStr]];
-        
+
         if (![imageFilePath hasSuffix:@".jpg"]) {
             imageFilePath = [NSString stringWithFormat:@"%@.jpg",imageFilePath];
         }
-        
+
         NSFileManager *manager = [NSFileManager defaultManager];
         [manager createDirectoryAtPath:imageFilePath withIntermediateDirectories:YES attributes:nil error:nil];
         NSString *path2 = imageFilePath;
         [manager removeItemAtPath:path2 error:nil];
-        
+
         NSLog(@"%@",imageFilePath);
-        
+
 //        BOOL success;
 //        NSData *data = [self compressOriginalImage:SaveImage toMaxDataSizeKBytes:300];
 
@@ -194,6 +202,7 @@
                 NSString *fileName = [imageFilePath pathExtension];
                 NSLog(@"fileName:%@",fileName);
                 NSLog(@"imageFilePath:%@",imageFilePath);
+                [self.activityIndicator startAnimating];
                 [self OpenDraw:imageFilePath];
             }
         }];

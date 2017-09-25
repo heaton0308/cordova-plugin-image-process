@@ -688,8 +688,25 @@
                 <param name="ios-package" value="ImageProcess" />
             </feature>
         </config-file>
-        <source-file src="src/ios/ImageProcess.h"/>
+        <header-file src="src/ios/ImageProcess.h"/>
         <source-file src="src/ios/ImageProcess.m"/>
-        <source-file src="src/ios/MyCamera"/>
+
+        <header-file src="src/ios/MyCamera/BYFCameraProcessHeader.h"/>
+        <header-file src="src/ios/MyCamera/OpencvProcess.h"/>
+        <source-file src="src/ios/MyCamera/OpencvProcess.mm"/>
+        <header-file src="src/ios/MyCamera/UIImage+Rotate.h"/>
+        <source-file src="src/ios/MyCamera/UIImage+Rotate.m"/>
+        <source-file src="src/ios/MyCamera/opencv2.framework"/>
+
+        <header-file src="src/ios/MyCamera/CustomizeCamera/CameraViewController.h"/>
+        <source-file src="src/ios/MyCamera/CustomizeCamera/CameraViewController.m"/>
+
+        <header-file src="src/ios/MyCamera/MyCameraCropper/ClipViewController.h"/>
+        <source-file src="src/ios/MyCamera/MyCameraCropper/ClipViewController.m"/>
+        <header-file src="src/ios/MyCamera/MyCameraCropper/TKImageView.h"/>
+        <source-file src="src/ios/MyCamera/MyCameraCropper/TKImageView.m"/>
+
+        <source-file src="src/ios/MyCamera/myCsmeraimage/"/>
+
     </platform>
 </plugin>
