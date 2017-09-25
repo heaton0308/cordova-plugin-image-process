@@ -186,7 +186,7 @@ public class CropImgActivity extends Activity implements View.OnClickListener{
                 if (null != originalPath && !originalPath.equals("")) {
                     try {
                         Bitmap bitmap = MyBitmapFactory.getBitmapByPath(originalPath);
-                        bitmap = OpenCVUtils.threshold(bitmap,17,7.5D);
+                        // bitmap = OpenCVUtils.threshold(bitmap,17,7.5D);
                         Message message = new Message();
                         message.what = 3;
                         message.obj = bitmap;
@@ -200,7 +200,7 @@ public class CropImgActivity extends Activity implements View.OnClickListener{
                         if (null != BitmapTransfer.transferBitmapData) {
                             Bitmap bitmap = BitmapFactory.decodeByteArray(BitmapTransfer.transferBitmapData, 0, BitmapTransfer.transferBitmapData.length);
                             Logger.e("initBitmap ----- " + bitmap.getByteCount() + " w = " + bitmap.getWidth() + " h = " + bitmap.getHeight());
-                            bitmap = OpenCVUtils.threshold(bitmap,17,7.5D);
+                            // bitmap = OpenCVUtils.threshold(bitmap,17,7.5D);
                             Message message = new Message();
                             message.what = 3;
                             message.obj = bitmap;
