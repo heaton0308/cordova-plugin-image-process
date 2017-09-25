@@ -1,18 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59df2590-fc3e-45f1-8240-c8053584d711" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ios/MyCamera/KVNELoading/KVNProgress.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ios/MyCamera/KVNELoading/KVNProgress.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ios/MyCamera/KVNELoading/KVNProgressView.xib" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ios/MyCamera/KVNELoading/UIImage+KVNEmpty.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ios/MyCamera/KVNELoading/UIImage+KVNEmpty.m" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ios/MyCamera/KVNELoading/UIImage+KVNImageEffects.h" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/ios/MyCamera/KVNELoading/UIImage+KVNImageEffects.m" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugin.xml" afterPath="$PROJECT_DIR$/plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ios/MyCamera/MyCameraCropper/ClipViewController.m" afterPath="$PROJECT_DIR$/src/ios/MyCamera/MyCameraCropper/ClipViewController.m" />
-    </list>
+    <list default="true" id="59df2590-fc3e-45f1-8240-c8053584d711" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -45,8 +34,8 @@
       <file leaf-file-name="ClipViewController.m" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ios/MyCamera/MyCameraCropper/ClipViewController.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="148" column="5" lean-forward="true" selection-start-line="148" selection-start-column="5" selection-end-line="148" selection-end-column="5" />
+            <state relative-caret-position="2244">
+              <caret line="132" column="28" lean-forward="true" selection-start-line="132" selection-start-column="28" selection-end-line="132" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -136,7 +125,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="179" />
+    <option name="x" value="55" />
     <option name="y" value="23" />
     <option name="width" value="1662" />
     <option name="height" value="1021" />
@@ -420,7 +409,7 @@
       <workItem from="1506063731389" duration="1284000" />
       <workItem from="1506077535493" duration="293000" />
       <workItem from="1506078422678" duration="669000" />
-      <workItem from="1506303233784" duration="2775000" />
+      <workItem from="1506303233784" duration="5747000" />
     </task>
     <task id="LOCAL-00001" summary="android 版本完成">
       <created>1505987594599</created>
@@ -461,10 +450,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34078000" />
+    <option name="totallyTimeSpent" value="37050000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="179" y="23" width="1662" height="1021" extended-state="0" />
+    <frame x="55" y="23" width="1662" height="1021" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2751678" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -653,8 +642,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ios/MyCamera/MyCameraCropper/ClipViewController.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="148" column="5" lean-forward="true" selection-start-line="148" selection-start-column="5" selection-end-line="148" selection-end-column="5" />
+        <state relative-caret-position="2244">
+          <caret line="132" column="28" lean-forward="true" selection-start-line="132" selection-start-column="28" selection-end-line="132" selection-end-column="28" />
           <folding />
         </state>
       </provider>
