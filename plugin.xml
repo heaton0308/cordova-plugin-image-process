@@ -691,22 +691,22 @@
         <header-file src="src/ios/ImageProcess.h"/>
         <source-file src="src/ios/ImageProcess.m"/>
 
-        <header-file src="src/ios/MyCamera/BYFCameraProcessHeader.h"/>
-        <header-file src="src/ios/MyCamera/OpencvProcess.h"/>
-        <source-file src="src/ios/MyCamera/OpencvProcess.mm"/>
-        <header-file src="src/ios/MyCamera/UIImage+Rotate.h"/>
-        <source-file src="src/ios/MyCamera/UIImage+Rotate.m"/>
-        <source-file src="src/ios/MyCamera/opencv2.framework"/>
+        <header-file src="src/ios/MyCamera/BYFCameraProcessHeader.h" target-dir="MyCamera/"/>
+        <header-file src="src/ios/MyCamera/OpencvProcess.h" target-dir="MyCamera/"/>
+        <source-file src="src/ios/MyCamera/OpencvProcess.mm" target-dir="MyCamera/"/>
+        <header-file src="src/ios/MyCamera/UIImage+Rotate.h" target-dir="MyCamera/"/>
+        <source-file src="src/ios/MyCamera/UIImage+Rotate.m" target-dir="MyCamera/"/>
+        <source-file src="src/ios/MyCamera/opencv2.framework" target-dir="MyCamera/"/>
 
-        <header-file src="src/ios/MyCamera/CustomizeCamera/CameraViewController.h"/>
-        <source-file src="src/ios/MyCamera/CustomizeCamera/CameraViewController.m"/>
+        <header-file src="src/ios/MyCamera/CustomizeCamera/CameraViewController.h" target-dir="MyCamera/CustomizeCamera/"/>
+        <source-file src="src/ios/MyCamera/CustomizeCamera/CameraViewController.m" target-dir="MyCamera/CustomizeCamera/"/>
 
-        <header-file src="src/ios/MyCamera/MyCameraCropper/ClipViewController.h"/>
-        <source-file src="src/ios/MyCamera/MyCameraCropper/ClipViewController.m"/>
-        <header-file src="src/ios/MyCamera/MyCameraCropper/TKImageView.h"/>
-        <source-file src="src/ios/MyCamera/MyCameraCropper/TKImageView.m"/>
+        <header-file src="src/ios/MyCamera/MyCameraCropper/ClipViewController.h" target-dir="MyCamera/MyCameraCropper/"/>
+        <source-file src="src/ios/MyCamera/MyCameraCropper/ClipViewController.m" target-dir="MyCamera/MyCameraCropper/"/>
+        <header-file src="src/ios/MyCamera/MyCameraCropper/TKImageView.h" target-dir="MyCamera/MyCameraCropper/"/>
+        <source-file src="src/ios/MyCamera/MyCameraCropper/TKImageView.m" target-dir="MyCamera/MyCameraCropper/"/>
 
-        <source-file src="src/ios/MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/" target-dir="MyCamera/myCsmeraimage/"/>
 
     </platform>
 </plugin>
