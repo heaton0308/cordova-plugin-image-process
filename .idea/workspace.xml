@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59df2590-fc3e-45f1-8240-c8053584d711" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/plugin.xml" afterPath="$PROJECT_DIR$/plugin.xml" />
-    </list>
+    <list default="true" id="59df2590-fc3e-45f1-8240-c8053584d711" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -27,8 +24,8 @@
       <file leaf-file-name="plugin.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/plugin.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="565">
-              <caret line="758" column="0" lean-forward="false" selection-start-line="758" selection-start-column="0" selection-end-line="758" selection-end-column="0" />
+            <state relative-caret-position="463">
+              <caret line="752" column="80" lean-forward="false" selection-start-line="752" selection-start-column="80" selection-end-line="752" selection-end-column="80" />
               <folding />
             </state>
           </provider>
@@ -413,7 +410,7 @@
       <workItem from="1506077535493" duration="293000" />
       <workItem from="1506078422678" duration="669000" />
       <workItem from="1506303233784" duration="5747000" />
-      <workItem from="1506406975033" duration="1334000" />
+      <workItem from="1506406975033" duration="1361000" />
     </task>
     <task id="LOCAL-00001" summary="android 版本完成">
       <created>1505987594599</created>
@@ -454,7 +451,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38384000" />
+    <option name="totallyTimeSpent" value="38411000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="38" y="25" width="1662" height="1021" extended-state="0" />
@@ -646,8 +643,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/plugin.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="565">
-          <caret line="758" column="0" lean-forward="false" selection-start-line="758" selection-start-column="0" selection-end-line="758" selection-end-column="0" />
+        <state relative-caret-position="463">
+          <caret line="752" column="80" lean-forward="false" selection-start-line="752" selection-start-column="80" selection-end-line="752" selection-end-column="80" />
           <folding />
         </state>
       </provider>
