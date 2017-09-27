@@ -706,7 +706,58 @@
         <header-file src="src/ios/MyCamera/MyCameraCropper/TKImageView.h" target-dir="MyCamera/MyCameraCropper/"/>
         <source-file src="src/ios/MyCamera/MyCameraCropper/TKImageView.m" target-dir="MyCamera/MyCameraCropper/"/>
 
-        <source-file src="src/ios/MyCamera/myCsmeraimage/" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/adjust_btn_eraser_normal@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/adjust_btn_eraser_normal@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/adjust_btn_eraser_selected@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/adjust_btn_eraser_selected@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/adjust_btn_recall_dis@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/adjust_btn_recall_dis@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/adjust_btn_recall_normal@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/adjust_btn_recall_normal@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/adjust_btn_save_normal@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/adjust_btn_save_normal@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/adjust_btn_save_pre@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/adjust_btn_save_pre@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/btn_bg_normal@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/btn_bg_normal@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/btn_bg_selected@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/btn_bg_selected@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/marquee_btn_back_normal@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/marquee_btn_back_normal@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/marquee_btn_back_pre@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/marquee_btn_back_pre@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/marquee_btn_back_prebtn_rotate_normal@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/marquee_btn_back_prebtn_rotate_normal@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/marquee_btn_back_prebtn_rotate_pre@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/marquee_btn_back_prebtn_rotate_pre@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/marquee_btn_ok_normal@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/marquee_btn_ok_normal@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/marquee_btn_ok_pre@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/marquee_btn_ok_pre@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/marquee_btn_retake_normal@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/marquee_btn_retake_normal@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/marquee_btn_retake_pre@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/marquee_btn_retake_pre@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/takepic_btn_关闭_normal@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/takepic_btn_关闭_normal@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/takepic_btn_关闭_pre@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/takepic_btn_关闭_pre@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/takepic_btn_lightoff@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/takepic_btn_lightoff@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/takepic_btn_lighton@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/takepic_btn_lighton@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/takepic_btn_lighton1@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/takepic_btn_lighton1@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/takepic_btn_normal@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/takepic_btn_normal@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/takepic_btn_pre@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/takepic_btn_pre@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/takepic_btn_takepic_normal@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/takepic_btn_takepic_normal@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/takepic_btn_takepic_pre@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
+        <source-file src="src/ios/MyCamera/myCsmeraimage/takepic_btn_takepic_pre@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
+
+
 
     </platform>
 </plugin>
