@@ -67,7 +67,7 @@
         CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:path];
         [self.commandDelegate sendPluginResult:pluginResult callbackId:self.callbackId];
     }else{
-        CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:path];
+        CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:path];
         [self.commandDelegate sendPluginResult:pluginResult callbackId:self.callbackId];
     }
 }

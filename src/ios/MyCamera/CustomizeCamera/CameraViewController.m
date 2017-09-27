@@ -198,6 +198,9 @@
     if (_lampButton.isSelected == YES) {
         _lampButton.selected = !_lampButton.selected;
     }
+    if (_takeButton) {
+        _takeButton.userInteractionEnabled = YES;
+    }
 }
 
 
@@ -275,6 +278,7 @@
 }
 //照相
 - (void)takePhotoButtonClick {
+    _takeButton.userInteractionEnabled = NO;
     _stillImageConnection = [self.stillImageOutput        connectionWithMediaType:AVMediaTypeVideo];
     UIDeviceOrientation curDeviceOrientation = [[UIDevice currentDevice] orientation];
     AVCaptureVideoOrientation avcaptureOrientation = [self avOrientationForDeviceOrientation:curDeviceOrientation];

@@ -757,7 +757,7 @@
         <source-file src="src/ios/MyCamera/myCsmeraimage/takepic_btn_takepic_normal@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
         <source-file src="src/ios/MyCamera/myCsmeraimage/takepic_btn_takepic_pre@2x.png" target-dir="MyCamera/myCsmeraimage/"/>
         <source-file src="src/ios/MyCamera/myCsmeraimage/takepic_btn_takepic_pre@3x.png" target-dir="MyCamera/myCsmeraimage/"/>
-
+        <source-file src="src/ios/MyCamera/myCsmeraimage/quan.png" target-dir="MyCamera/myCsmeraimage/"/>
 
 
     </platform>
