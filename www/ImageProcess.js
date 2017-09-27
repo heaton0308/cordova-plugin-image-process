@@ -6,7 +6,7 @@ var ImageProcess = {
     openAlbum: function (savedFilePath, success, error){
         exec(success, error, "ImageProcess", "openAlbum", [savedFilePath]);
     },
-    openCrop: function (savedFilePath, success, error){
+    openCrop: function (savedFilePath,selectedFilePath, success, error){
         exec(success, error, "ImageProcess", "openCrop", [savedFilePath,selectedFilePath])
     }
 };
