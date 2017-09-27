@@ -1,12 +1,19 @@
 package com.qxcloud.imageprocess.activity;
 
+import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.annotation.NonNull;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -14,22 +21,29 @@ import android.widget.RelativeLayout;
 
 import com.qxcloud.imageprocess.ImageProcess;
 import com.qxcloud.imageprocess.ResourceUtils;
-import com.qxcloud.imageprocess.ToastUtils;
 import com.qxcloud.imageprocess.crop.CropImageType;
 import com.qxcloud.imageprocess.crop.CropImageView;
 import com.qxcloud.imageprocess.editAPI.EditImageAPI;
 import com.qxcloud.imageprocess.editAPI.EditImageMessage;
-import com.qxcloud.imageprocess.utils.FileUtils;
 import com.qxcloud.imageprocess.utils.Logger;
 import com.qxcloud.imageprocess.utils.MyBitmapFactory;
 import com.qxcloud.imageprocess.utils.OpenCVUtils;
+import com.qxcloud.imageprocess.utils.PermissionUtils;
+
+import java.io.File;
 
 /**
  * Created by cfh on 2017-09-05.
  * 图片编辑 裁剪
  */
 
-public class CropImgActivity extends Activity implements View.OnClickListener{
+public class CropImgActivity extends FragmentActivity implements View.OnClickListener{
+
+    private static final String[] NEED_PERMISSIONS = {
+            Manifest.permission.CAMERA,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE
+    };
+
     private CropImageView cropmageView;//图片
     private RelativeLayout layout_return;//返回
     private RelativeLayout layout_preservation;
@@ -69,8 +83,18 @@ public class CropImgActivity extends Activity implements View.OnClickListener{
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(ResourceUtils.getIdByName(this,ResourceUtils.TYPE_LAYOUT,"activity_editimg_view"));
         activity = this;
-        initView();
+        checkPermission();
     }
+
+    private void checkPermission(){
+        if(Build.VERSION.SDK_INT >= 23
+                && PermissionUtils.hasPermissions(this, NEED_PERMISSIONS)){
+            PermissionUtils.requestPermissions(this,101,NEED_PERMISSIONS);
+        }else{
+            initView();
+        }
+    }
+
 
     /**
      * 初始化View
@@ -113,7 +137,27 @@ public class CropImgActivity extends Activity implements View.OnClickListener{
         } else if (i == ResourceUtils.getIdByName(this,ResourceUtils.TYPE_ID,"tv_preservation")) {
             //确定
             handler.sendEmptyMessage(0);
-            saveBitmapFile();
+            try {
+                Bitmap bitmap = cropmageView.getCroppedImage();
+                if (bitmap != null && !bitmap.isRecycled()) {
+                    Logger.e("saved bitmap size = "+bitmap.getByteCount()/8/1024+"KB");
+                    boolean isSaved = MyBitmapFactory.saveBitmap(bitmap,savedFilePath);
+                    if(isSaved){
+                        File file = new File(savedFilePath);
+                        Logger.e("saved file size = "+file.length()/1024+"KB");
+                        handler.sendEmptyMessageDelayed(1,500);
+                        handler.postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                EditImageAPI.getInstance().post(0,new EditImageMessage(0));
+                                finish();
+                            }
+                        },500);
+                    }
+                }
+            } catch (Exception e) {
+                dismissProgressDialog();
+            }
         } else if (i == ResourceUtils.getIdByName(this,ResourceUtils.TYPE_ID,"tv_rotate")) {
             cropmageView.rotateImage(-90);
         }
@@ -135,6 +179,7 @@ public class CropImgActivity extends Activity implements View.OnClickListener{
                     break;
                 case 3:
                     Bitmap bitmap = (Bitmap) msg.obj;
+                    Logger.e("init crop image size = "+bitmap.getByteCount()/8/1024+"KB");
                     cropImage(bitmap);
                     break;
                 case 4:
@@ -143,39 +188,6 @@ public class CropImgActivity extends Activity implements View.OnClickListener{
             }
         }
     };
-
-    private void saveBitmapFile(){
-        new Thread(){
-            @Override
-            public void run() {
-                try {
-                    Bitmap bitmap = cropmageView.getCroppedImage();
-                    if (bitmap != null && !bitmap.isRecycled()) {
-                        boolean isSaved = MyBitmapFactory.saveBitmap(bitmap,savedFilePath);
-                        if(isSaved){
-                            handler.postDelayed(new Runnable() {
-                                @Override
-                                public void run() {
-                                    handler.sendEmptyMessage(1);
-                                    EditImageAPI.getInstance().post(0,new EditImageMessage(0));
-                                    finish();
-                                }
-                            },500);
-                        }else{
-                            handler.sendEmptyMessageDelayed(1,200);
-                            ToastUtils.toastMessage(CropImgActivity.this,"文件保存失败");
-                        }
-                    }else{
-                        handler.sendEmptyMessageDelayed(1,200);
-                        ToastUtils.toastMessage(CropImgActivity.this,"图片裁剪失败");
-                    }
-                } catch (Exception e) {
-                    ToastUtils.toastMessage(CropImgActivity.this,"图片裁剪异常");
-                    handler.sendEmptyMessageDelayed(1,200);
-                }
-            }
-        }.start();
-    }
 
     private void initBitMap() {
         new Thread(new Runnable() {
@@ -186,7 +198,9 @@ public class CropImgActivity extends Activity implements View.OnClickListener{
                 if (null != originalPath && !originalPath.equals("")) {
                     try {
                         Bitmap bitmap = MyBitmapFactory.getBitmapByPath(originalPath);
-                        // bitmap = OpenCVUtils.threshold(bitmap,17,7.5D);
+                        Logger.e("init uri compress bitmap image size = "+bitmap.getByteCount()/8/1024+"KB");
+                        bitmap = OpenCVUtils.threshold(bitmap,17,2.5D);
+                        Logger.e("init uri threshold bitmap image size = "+bitmap.getByteCount()/8/1024+"KB");
                         Message message = new Message();
                         message.what = 3;
                         message.obj = bitmap;
@@ -199,8 +213,9 @@ public class CropImgActivity extends Activity implements View.OnClickListener{
                     try {
                         if (null != BitmapTransfer.transferBitmapData) {
                             Bitmap bitmap = BitmapFactory.decodeByteArray(BitmapTransfer.transferBitmapData, 0, BitmapTransfer.transferBitmapData.length);
-                            Logger.e("initBitmap ----- " + bitmap.getByteCount() + " w = " + bitmap.getWidth() + " h = " + bitmap.getHeight());
-                            // bitmap = OpenCVUtils.threshold(bitmap,17,7.5D);
+                            Logger.e("init data compress bitmap image size = "+bitmap.getByteCount()/8/1024+"KB");
+                            bitmap = OpenCVUtils.threshold(bitmap,17,2.5D);
+                            Logger.e("init data threshold bitmap image size = "+bitmap.getByteCount()/8/1024+"KB");
                             Message message = new Message();
                             message.what = 3;
                             message.obj = bitmap;
@@ -221,5 +236,38 @@ public class CropImgActivity extends Activity implements View.OnClickListener{
         BitmapTransfer.transferBitmap = null;
         BitmapTransfer.transferBitmapData = null;
         cropmageView = null;
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (grantResults.length > 0) {
+            boolean isGranted = true;
+            for (int grantResult : grantResults) {
+                if (grantResult != PackageManager.PERMISSION_GRANTED) {
+                    isGranted = false;
+                    break;
+                }
+            }
+            Logger.e("isGranted === " + isGranted + " --- " + grantResults.length);
+            if (isGranted) {
+                initView();
+            } else {
+                new AlertDialog.Builder(this)
+                        .setMessage("此功能需要相机及存储权限，请前往设置打开")
+                        .setNegativeButton("确认", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        EditImageAPI.getInstance().post(1, new EditImageMessage(1));
+                                        finish();
+                                    }
+                                }, 1000);
+                            }
+                        })
+                        .show();
+            }
+        }
     }
 }

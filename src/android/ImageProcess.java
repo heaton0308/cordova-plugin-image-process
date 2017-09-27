@@ -1,9 +1,7 @@
 package com.qxcloud.imageprocess;
 
-import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
 import android.os.Handler;
@@ -22,10 +20,8 @@ import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaInterface;
 import org.apache.cordova.CordovaPlugin;
 import org.apache.cordova.CordovaWebView;
-import org.apache.cordova.PermissionHelper;
 import org.json.JSONArray;
 import org.json.JSONException;
-import java.io.File;
 
 /**
  * CREATED BY:         heaton
@@ -49,7 +45,6 @@ public class ImageProcess extends CordovaPlugin implements EditImgInterface{
     private static final String METHOD_OPEN_ALBUM = "openAlbum";
     private static final String METHOD_OPEN_CROP = "openCrop";
 
-    private static final int PERMISSION_REQUEST_CODE = 201;
 
     private Handler handler = new Handler(){
         @Override
@@ -87,25 +82,10 @@ public class ImageProcess extends CordovaPlugin implements EditImgInterface{
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         this.callbackContext = callbackContext;
         this.mAction = action;
-        if(args != null){
-            mSavedFilePath = args.optString(0);
-            mSelectFilePath = args.optString(1);
-        }
-        checkPermission();
+        mSavedFilePath = args.optString(0);
+        mSelectFilePath = args.optString(1);
+        exeMethod();
         return true;
-    }
-
-    private void checkPermission(){
-        boolean hasCameraPermission = PermissionHelper.hasPermission(this, Manifest.permission.CAMERA);
-        boolean hasWritePermission = PermissionHelper.hasPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        boolean hasReadPermission = PermissionHelper.hasPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
-        if(!hasCameraPermission||!hasWritePermission||!hasReadPermission){
-            PermissionHelper.requestPermissions(this,PERMISSION_REQUEST_CODE,new String[]{
-                    Manifest.permission.CAMERA,Manifest.permission.WRITE_EXTERNAL_STORAGE,Manifest.permission.READ_EXTERNAL_STORAGE
-            });
-        }else{
-            exeMethod();
-        }
     }
 
     private void exeMethod(){
@@ -119,26 +99,6 @@ public class ImageProcess extends CordovaPlugin implements EditImgInterface{
         }else if(mAction.equals(METHOD_OPEN_CROP)){
             if(!TextUtils.isEmpty(mSelectFilePath)){
                 openCrop(mSelectFilePath);
-            }
-        }
-    }
-
-
-    @Override
-    public void onRequestPermissionResult(int requestCode, String[] permissions, int[] grantResults) throws JSONException {
-        if(requestCode == PERMISSION_REQUEST_CODE){
-            boolean isAllPermissionGranted = true;
-            for(int grantResult : grantResults){
-                if(grantResult != PackageManager.PERMISSION_GRANTED){
-                    isAllPermissionGranted = false;
-                    break;
-                }
-            }
-            if(isAllPermissionGranted){
-                exeMethod();
-            }else{
-                ToastUtils.toastMessage(this.cordova.getActivity(),"请前往应用权限管理打开相机及内部存储权限");
-                this.callbackContext.error("请前往应用权限管理打开相机及内部存储权限");
             }
         }
     }
@@ -170,17 +130,15 @@ public class ImageProcess extends CordovaPlugin implements EditImgInterface{
     }
 
     public void openCrop(String selectFilePath){
-        openCrop(Uri.parse(selectFilePath));
+        Intent intent = new Intent(ACTION_CROP);
+        intent.putExtra(EXTRA_DEFAULT_SAVE_PATH, mSavedFilePath);
+        intent.putExtra(EXTRA_DEFAULT_SELECT_PATH,selectFilePath);
+        this.cordova.startActivityForResult(this,intent,104);
     }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent intent) {
         super.onActivityResult(requestCode, resultCode, intent);
-
-        if(resultCode != Activity.RESULT_OK){
-            callbackContext.error("未选择图片");
-        }
-
         if(requestCode == REQUEST_ALBUM && resultCode == Activity.RESULT_OK){
             if (intent != null) {
                 Message message = new Message();
@@ -194,7 +152,12 @@ public class ImageProcess extends CordovaPlugin implements EditImgInterface{
     @Override
     public void onEditImgResult(int code, EditImageMessage editImageMessage) {
         if(code == 0 && editImageMessage.getWhat() == 0){
-            callbackContext.success(Uri.fromFile(new File(mSavedFilePath)).toString());
+            callbackContext.success(mSavedFilePath);
+        }
+        if(code == 1 && editImageMessage.getWhat() == 1){
+            callbackContext.error("请前往设置打开相机及内部存储权限");
+        }else if(code == 2 && editImageMessage.getWhat() == 1){
+            callbackContext.error("用户手动关闭页面");
         }
     }
 }

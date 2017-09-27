@@ -1,8 +1,15 @@
 package com.qxcloud.imageprocess.activity;
 
-import android.app.Activity;
+import android.Manifest;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.annotation.NonNull;
+import android.support.v4.app.FragmentActivity;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.Window;
@@ -12,8 +19,11 @@ import android.widget.CompoundButton;
 
 import com.qxcloud.imageprocess.ImageProcess;
 import com.qxcloud.imageprocess.ResourceUtils;
+import com.qxcloud.imageprocess.editAPI.EditImageAPI;
+import com.qxcloud.imageprocess.editAPI.EditImageMessage;
 import com.qxcloud.imageprocess.operate.CameraView;
 import com.qxcloud.imageprocess.utils.Logger;
+import com.qxcloud.imageprocess.utils.PermissionUtils;
 
 import org.opencv.android.BaseLoaderCallback;
 import org.opencv.android.CameraBridgeViewBase;
@@ -26,11 +36,17 @@ import org.opencv.core.Mat;
  * @Class: TakePhoteActivity
  * @Description: 拍照界面
  */
-public class TakePhotoActivity extends Activity implements CameraBridgeViewBase.CvCameraViewListener2,
-        CameraView.OnSavedListener{
+public class TakePhotoActivity extends FragmentActivity implements CameraBridgeViewBase.CvCameraViewListener2,
+        CameraView.OnSavedListener {
+
+    private static final String[] NEED_PERMISSIONS = {
+            Manifest.permission.CAMERA,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE
+    };
     private String savedPath;
     CameraView mOpenCvCameraView;
     private CheckBox photograph;//闪关灯
+    private Handler handler = new Handler();
 
     private BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(this) {
         @Override
@@ -38,7 +54,9 @@ public class TakePhotoActivity extends Activity implements CameraBridgeViewBase.
             switch (status) {
                 case LoaderCallbackInterface.SUCCESS: {
                     Logger.e("OpenCV loaded successfully");
-                    mOpenCvCameraView.enableView();
+                    if(mOpenCvCameraView != null){
+                        mOpenCvCameraView.enableView();
+                    }
                 }
                 break;
                 default: {
@@ -59,12 +77,24 @@ public class TakePhotoActivity extends Activity implements CameraBridgeViewBase.
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        checkPermission();
+    }
 
-        setContentView(ResourceUtils.getIdByName(this,ResourceUtils.TYPE_LAYOUT,"activity_take_photo"));
+    private void checkPermission() {
+        if (Build.VERSION.SDK_INT >= 23 &&
+                !PermissionUtils.hasPermissions(
+                        this, NEED_PERMISSIONS)) {
+            PermissionUtils.requestPermissions(this,102,NEED_PERMISSIONS);
+        } else {
+            initView();
+        }
+    }
 
+    private void initView() {
+        setContentView(ResourceUtils.getIdByName(this, ResourceUtils.TYPE_LAYOUT, "activity_take_photo"));
         savedPath = getIntent().getStringExtra(ImageProcess.EXTRA_DEFAULT_SAVE_PATH);
 
-        mOpenCvCameraView = (CameraView) findViewById(ResourceUtils.getIdByName(this,ResourceUtils.TYPE_ID,"cameraPreview"));
+        mOpenCvCameraView = (CameraView) findViewById(ResourceUtils.getIdByName(this, ResourceUtils.TYPE_ID, "cameraPreview"));
 //        FocusView focusView = (FocusView) findViewById(R.id.view_focus);
 
         mOpenCvCameraView.setVisibility(SurfaceView.VISIBLE);
@@ -73,7 +103,7 @@ public class TakePhotoActivity extends Activity implements CameraBridgeViewBase.
 
         mOpenCvCameraView.setOnSavedListener(this);
 
-        photograph = (CheckBox) findViewById(ResourceUtils.getIdByName(this,ResourceUtils.TYPE_ID,"photographs"));
+        photograph = (CheckBox) findViewById(ResourceUtils.getIdByName(this, ResourceUtils.TYPE_ID, "photographs"));
         photograph.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -82,6 +112,7 @@ public class TakePhotoActivity extends Activity implements CameraBridgeViewBase.
             }
         });
     }
+
 
     @Override
     public void onPause() {
@@ -110,6 +141,7 @@ public class TakePhotoActivity extends Activity implements CameraBridgeViewBase.
 
 
     public void close(View view) {
+        EditImageAPI.getInstance().post(1, new EditImageMessage(2));
         finish();
     }
 
@@ -141,5 +173,38 @@ public class TakePhotoActivity extends Activity implements CameraBridgeViewBase.
         BitmapTransfer.transferBitmapData = data;
         startActivity(intent);
         finish();
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (grantResults.length > 0) {
+            boolean isGranted = true;
+            for (int grantResult : grantResults) {
+                if (grantResult != PackageManager.PERMISSION_GRANTED) {
+                    isGranted = false;
+                    break;
+                }
+            }
+            Logger.e("isGranted === " + isGranted + " --- " + grantResults.length);
+            if (isGranted) {
+                initView();
+            } else {
+                new AlertDialog.Builder(this)
+                        .setMessage("此功能需要相机及存储权限，请前往设置打开")
+                        .setNegativeButton("确认", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        EditImageAPI.getInstance().post(1, new EditImageMessage(1));
+                                        finish();
+                                    }
+                                }, 1000);
+                            }
+                        })
+                        .show();
+            }
+        }
     }
 }

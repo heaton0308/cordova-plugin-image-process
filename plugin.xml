@@ -2,7 +2,6 @@
 <plugin id="cordova-plugin-image-process" version="1.0.0" xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android">
     <name>cordova-plugin-image-process</name>
-    <dependency id="cordova-plugin-compat" version="^1.1.0" />
     <repo>http://192.168.1.254/hetong/cordova-plugin-image-process.git</repo>
     <js-module name="ImageProcess" src="www/ImageProcess.js">
         <clobbers target="ImageProcess"/>
@@ -116,6 +115,8 @@
         <source-file src="src/android/com/qxcloud/imageprocess/utils/PhotoUtils.java"
                      target-dir="src/com/qxcloud/imageprocess/utils"/>
         <source-file src="src/android/com/qxcloud/imageprocess/utils/URIUtils.java"
+                     target-dir="src/com/qxcloud/imageprocess/utils"/>
+        <source-file src="src/android/com/qxcloud/imageprocess/utils/PermissionUtils.java"
                      target-dir="src/com/qxcloud/imageprocess/utils"/>
         <!--opencv android-->
         <source-file src="src/android/org/opencv/android/AsyncServiceHelper.java"
