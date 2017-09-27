@@ -193,111 +193,72 @@
 //        BOOL success;
 //        NSData *data = [self compressOriginalImage:SaveImage toMaxDataSizeKBytes:300];
 
-        [self compressedImageFiles:SaveImage imageKB:295 imageBlock:^(NSData *image) {
-            NSData *data = image;
-            BOOL success;
-            NSLog(@"%lu",(unsigned long)data.length/1024);
-            success = [data writeToFile:imageFilePath  atomically:YES];
-            if (success){
-                NSString *fileName = [imageFilePath pathExtension];
-                NSLog(@"fileName:%@",fileName);
-                NSLog(@"imageFilePath:%@",imageFilePath);
-                [self.activityIndicator startAnimating];
-                [self OpenDraw:imageFilePath];
-            }
-        }];
+        NSData *data = [self compressOriginalImage:[self imageCompressWithSimple:SaveImage] toMaxDataSizeKBytes:300.0];
+        BOOL success;
+        NSLog(@"%lu",(unsigned long)data.length/1024);
+        success = [data writeToFile:imageFilePath  atomically:YES];
+        if (success){
+            NSString *fileName = [imageFilePath pathExtension];
+            NSLog(@"fileName:%@",fileName);
+            NSLog(@"imageFilePath:%@",imageFilePath);
+            [self.activityIndicator startAnimating];
+            [self OpenDraw:imageFilePath];
+        }
 
         NSLog(@"储存到本地");
     }
 }
-    
-    /**
-     *  压缩图片
-     *
-     *  @param image       需要压缩的图片
-     *  @param fImageBytes 希望压缩后的大小(以KB为单位)
-     *
-     *  @return 压缩后的图片
-     */
-- (void)compressedImageFiles:(UIImage *)image
-                     imageKB:(CGFloat)fImageKBytes
-                  imageBlock:(void(^)(NSData *image))block {
-    
-    __block UIImage *imageCope = image;
-    CGFloat fImageBytes = fImageKBytes * 1024;//需要压缩的字节Byte
-    
-    __block NSData *uploadImageData = nil;
-    
-    uploadImageData = UIImagePNGRepresentation(imageCope);
-    NSLog(@"图片压前缩成 %fKB",uploadImageData.length/1024.0);
-    CGSize size = imageCope.size;
-    CGFloat imageWidth = size.width;
-    CGFloat imageHeight = size.height;
-    
-    if (uploadImageData.length > fImageBytes && fImageBytes >0) {
-        
-        dispatch_async(dispatch_queue_create("CompressedImage", DISPATCH_QUEUE_SERIAL), ^{
-            
-            /* 宽高的比例 **/
-            CGFloat ratioOfWH = imageWidth/imageHeight;
-            /* 压缩率 **/
-            CGFloat compressionRatio = fImageBytes/uploadImageData.length;
-            /* 宽度或者高度的压缩率 **/
-            CGFloat widthOrHeightCompressionRatio = sqrt(compressionRatio);
-            
-            CGFloat dWidth   = imageWidth *widthOrHeightCompressionRatio;
-            CGFloat dHeight  = imageHeight*widthOrHeightCompressionRatio;
-            if (ratioOfWH >0) { /* 宽 > 高,说明宽度的压缩相对来说更大些 **/
-                dHeight = dWidth/ratioOfWH;
-            }else {
-                dWidth  = dHeight*ratioOfWH;
-            }
-            
-            imageCope = [self drawWithWithImage:imageCope width:dWidth height:dHeight];
-            uploadImageData = UIImagePNGRepresentation(imageCope);
-            
-            NSLog(@"当前的图片已经压缩成 %fKB",uploadImageData.length/1024.0);
-            /* 控制在 1M 以内**/
-            while (fabs(uploadImageData.length - fImageBytes) > 1024) {
-                /* 再次压缩的比例**/
-                CGFloat nextCompressionRatio = 0.9;
-                
-                if (uploadImageData.length > fImageBytes) {
-                    dWidth = dWidth*nextCompressionRatio;
-                    dHeight= dHeight*nextCompressionRatio;
-                }else {
-                    dWidth = dWidth/nextCompressionRatio;
-                    dHeight= dHeight/nextCompressionRatio;
-                }
-                
-                imageCope = [self drawWithWithImage:imageCope width:dWidth height:dHeight];
-                uploadImageData = UIImagePNGRepresentation(imageCope);
-                
-            }
-            
-            NSLog(@"图片已经压缩成 %fKB",uploadImageData.length/1024.0);
-            
-            dispatch_sync(dispatch_get_main_queue(), ^{
-                block(uploadImageData);
-            });
-        });
+
+- (UIImage*)imageCompressWithSimple:(UIImage*)image{
+
+    CGSize size = image.size;
+    CGFloat scale = 1.0;
+    //TODO:KScreenWidth屏幕宽
+    if (size.width > MAKE.size.width || size.height > MAKE.size.height) {
+        if (size.width > size.height) {
+            scale = MAKE.size.width / size.width;
+        }else {
+            scale = MAKE.size.height / size.height;
+        }
     }
-    else
-    {
-        block(uploadImageData);
-    }
-}
-    
-    /* 根据 dWidth dHeight 返回一个新的image**/
-- (UIImage *)drawWithWithImage:(UIImage *)imageCope width:(CGFloat)dWidth height:(CGFloat)dHeight{
-    
-    UIGraphicsBeginImageContext(CGSizeMake(dWidth, dHeight));
-    [imageCope drawInRect:CGRectMake(0, 0, dWidth, dHeight)];
-    imageCope = UIGraphicsGetImageFromCurrentImageContext();
+    CGFloat width = size.width;
+    CGFloat height = size.height;
+    CGFloat scaledWidth = width * scale;
+    CGFloat scaledHeight = height * scale;
+    CGSize secSize =CGSizeMake(scaledWidth, scaledHeight);
+    //TODO:设置新图片的宽高
+    UIGraphicsBeginImageContext(secSize); // this will crop
+    [image drawInRect:CGRectMake(0,0,scaledWidth,scaledHeight)];
+    UIImage* newImage= UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
-    
-    return imageCope;
-    
+    return newImage;
+}
+
+/**
+ *  压缩图片到指定文件大小
+ *
+ *  @param image 目标图片
+ *  @param size  目标大小（最大值）
+ *
+ *  @return 返回的图片文件
+ */
+- (NSData *)compressOriginalImage:(UIImage *)image toMaxDataSizeKBytes:(CGFloat)size{
+    NSData * data = UIImageJPEGRepresentation(image, 1.0);
+    CGFloat dataKBytes = data.length/1000.0;
+    CGFloat maxQuality = 0.9f;
+    CGFloat lastData = dataKBytes;
+    while (dataKBytes > size && maxQuality > 0.01f) {
+        maxQuality = maxQuality - 0.01f;
+        data = UIImageJPEGRepresentation(image, maxQuality);
+        dataKBytes = data.length / 1000.0;
+        if (lastData == dataKBytes) {
+            break;
+        }else{
+            lastData = dataKBytes;
+        }
+    }
+    NSLog(@"%lu",(unsigned long)data.length/1024);
+    return data;
 }
 
 -(void)OpenDraw:(NSString *)imagePath{
