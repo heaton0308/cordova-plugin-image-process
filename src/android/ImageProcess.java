@@ -23,6 +23,8 @@ import org.apache.cordova.CordovaWebView;
 import org.json.JSONArray;
 import org.json.JSONException;
 
+import java.io.File;
+
 /**
  * CREATED BY:         heaton
  * CREATED DATE:       2017/9/18
@@ -152,7 +154,7 @@ public class ImageProcess extends CordovaPlugin implements EditImgInterface{
     @Override
     public void onEditImgResult(int code, EditImageMessage editImageMessage) {
         if(code == 0 && editImageMessage.getWhat() == 0){
-            callbackContext.success(mSavedFilePath);
+            callbackContext.success(Uri.fromFile(new File(mSavedFilePath));
         }
         if(code == 1 && editImageMessage.getWhat() == 1){
             callbackContext.error("请前往设置打开相机及内部存储权限");
