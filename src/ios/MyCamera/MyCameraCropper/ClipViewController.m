@@ -250,7 +250,7 @@
         SaveImage  = [SaveImage rotate:UIImageOrientationLeft];
 //        BOOL success;
 //        NSData *data = [self compressOriginalImage:SaveImage toMaxDataSizeKBytes:200];
-        NSData *data = [self compressOriginalImage:[self imageCompressWithSimple:SaveImage] toMaxDataSizeKBytes:300.0];
+        NSData *data = [self compressOriginalImage:[self OriginImage:SaveImage scaleToSize:CGSizeMake(MAKE.size.height, MAKE.size.width)] toMaxDataSizeKBytes:195.0];
         BOOL success;
         NSLog(@"%lu",(unsigned long)data.length/1024);
         success = [data writeToFile:imageFilePath  atomically:YES];
@@ -267,6 +267,25 @@
         NSLog(@"储存到本地");
     }
 }
+
+/**
+ *  压缩图片
+ *  image:将要压缩的图片   size：压缩后的尺寸
+ */
+-(UIImage*) OriginImage:(UIImage *)image scaleToSize:(CGSize)size
+{
+    // 下面方法，第一个参数表示区域大小。第二个参数表示是否是非透明的。如果需要显示半透明效果，需要传NO，否则传YES。第三个参数就是屏幕密度了
+    UIGraphicsBeginImageContextWithOptions(size, NO, [UIScreen mainScreen].scale);
+    
+    [image drawInRect:CGRectMake(0, 0, size.width, size.height)];
+
+    UIImage* scaledImage = UIGraphicsGetImageFromCurrentImageContext();
+
+    UIGraphicsEndImageContext();
+
+    return scaledImage;   //返回的就是已经改变的图片
+}
+
 
 - (UIImage*)imageCompressWithSimple:(UIImage*)image{
 
