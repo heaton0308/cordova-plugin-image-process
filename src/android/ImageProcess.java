@@ -154,7 +154,7 @@ public class ImageProcess extends CordovaPlugin implements EditImgInterface{
     @Override
     public void onEditImgResult(int code, EditImageMessage editImageMessage) {
         if(code == 0 && editImageMessage.getWhat() == 0){
-            callbackContext.success(Uri.fromFile(new File(mSavedFilePath));
+            callbackContext.success(Uri.fromFile(new File(mSavedFilePath).toString());
         }
         if(code == 1 && editImageMessage.getWhat() == 1){
             callbackContext.error("请前往设置打开相机及内部存储权限");

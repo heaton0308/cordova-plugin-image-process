@@ -71,7 +71,7 @@
         NSLog(@"url:%@",imageUrl);
         NSString *stringImageUrl = imageUrl.absoluteString;
         NSLog(@"stringImageUrl:%@",stringImageUrl);
-        CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:path];
+        CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:stringImageUrl];
         [self.commandDelegate sendPluginResult:pluginResult callbackId:self.callbackId];
     }
 }
