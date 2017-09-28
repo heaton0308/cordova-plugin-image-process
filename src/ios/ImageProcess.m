@@ -67,6 +67,10 @@
         CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:path];
         [self.commandDelegate sendPluginResult:pluginResult callbackId:self.callbackId];
     }else{
+        NSURL *imageUrl = [NSURL fileURLWithPath:path];
+        NSLog(@"url:%@",imageUrl);
+        NSString *stringImageUrl = imageUrl.absoluteString;
+        NSLog(@"stringImageUrl:%@",stringImageUrl);
         CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_OK messageAsString:path];
         [self.commandDelegate sendPluginResult:pluginResult callbackId:self.callbackId];
     }

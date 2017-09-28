@@ -249,7 +249,7 @@
 
         SaveImage  = [SaveImage rotate:UIImageOrientationLeft];
 //        BOOL success;
-//        NSData *data = [self compressOriginalImage:SaveImage toMaxDataSizeKBytes:300];
+//        NSData *data = [self compressOriginalImage:SaveImage toMaxDataSizeKBytes:200];
         NSData *data = [self compressOriginalImage:[self imageCompressWithSimple:SaveImage] toMaxDataSizeKBytes:300.0];
         BOOL success;
         NSLog(@"%lu",(unsigned long)data.length/1024);
