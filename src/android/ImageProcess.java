@@ -27,7 +27,7 @@ import org.json.JSONException;
  * CREATED BY:         heaton
  * CREATED DATE:       2017/9/18
  * CREATED TIME:       下午5:52
- * CREATED DESCRIPTION:
+ * CREATED DESCRIPTION: cordova 与 原生交互中转文件
  */
 
 public class ImageProcess extends CordovaPlugin implements EditImgInterface{
