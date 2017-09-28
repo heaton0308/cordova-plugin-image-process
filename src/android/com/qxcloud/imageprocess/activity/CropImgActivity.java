@@ -27,7 +27,6 @@ import com.qxcloud.imageprocess.editAPI.EditImageAPI;
 import com.qxcloud.imageprocess.editAPI.EditImageMessage;
 import com.qxcloud.imageprocess.utils.Logger;
 import com.qxcloud.imageprocess.utils.MyBitmapFactory;
-import com.qxcloud.imageprocess.utils.OpenCVUtils;
 import com.qxcloud.imageprocess.utils.PermissionUtils;
 
 import java.io.File;
@@ -133,6 +132,7 @@ public class CropImgActivity extends FragmentActivity implements View.OnClickLis
         int i = v.getId();
         if (i == ResourceUtils.getIdByName(this,ResourceUtils.TYPE_ID,"tv_return")) {
             //返回
+            EditImageAPI.getInstance().post(2, new EditImageMessage(1));
             finish();
         } else if (i == ResourceUtils.getIdByName(this,ResourceUtils.TYPE_ID,"tv_preservation")) {
             //确定
@@ -199,6 +199,7 @@ public class CropImgActivity extends FragmentActivity implements View.OnClickLis
                     try {
                         Bitmap bitmap = MyBitmapFactory.getBitmapByPath(originalPath);
                         Logger.e("init uri compress bitmap image size = "+bitmap.getByteCount()/8/1024+"KB");
+//                        bitmap = OpenCVUtils.threshold(bitmap,17,2.5D);
                         Logger.e("init uri threshold bitmap image size = "+bitmap.getByteCount()/8/1024+"KB");
                         Message message = new Message();
                         message.what = 3;
@@ -213,6 +214,7 @@ public class CropImgActivity extends FragmentActivity implements View.OnClickLis
                         if (null != BitmapTransfer.transferBitmapData) {
                             Bitmap bitmap = BitmapFactory.decodeByteArray(BitmapTransfer.transferBitmapData, 0, BitmapTransfer.transferBitmapData.length);
                             Logger.e("init data compress bitmap image size = "+bitmap.getByteCount()/8/1024+"KB");
+//                            bitmap = OpenCVUtils.threshold(bitmap,17,2.5D);
                             Logger.e("init data threshold bitmap image size = "+bitmap.getByteCount()/8/1024+"KB");
                             Message message = new Message();
                             message.what = 3;
@@ -267,5 +269,10 @@ public class CropImgActivity extends FragmentActivity implements View.OnClickLis
                         .show();
             }
         }
+    }
+    @Override
+    public void onBackPressed() {
+        EditImageAPI.getInstance().post(2, new EditImageMessage(1));
+        super.onBackPressed();
     }
 }

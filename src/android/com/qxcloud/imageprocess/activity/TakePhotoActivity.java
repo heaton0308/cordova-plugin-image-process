@@ -141,7 +141,7 @@ public class TakePhotoActivity extends FragmentActivity implements CameraBridgeV
 
 
     public void close(View view) {
-        EditImageAPI.getInstance().post(1, new EditImageMessage(2));
+        EditImageAPI.getInstance().post(2, new EditImageMessage(1));
         finish();
     }
 
@@ -206,5 +206,11 @@ public class TakePhotoActivity extends FragmentActivity implements CameraBridgeV
                         .show();
             }
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        EditImageAPI.getInstance().post(2, new EditImageMessage(1));
+        super.onBackPressed();
     }
 }
