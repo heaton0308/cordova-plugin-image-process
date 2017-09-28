@@ -33,7 +33,7 @@ public class CameraView extends JavaCameraView implements PictureCallback {
     public void triggerFlash(boolean on){
         Camera.Parameters parameters = mCamera.getParameters();
         if(on){
-            parameters.setFlashMode(Camera.Parameters.FLASH_MODE_ON);
+            parameters.setFlashMode(Camera.Parameters.FLASH_MODE_TORCH);
         }else{
             parameters.setFlashMode(Camera.Parameters.FLASH_MODE_OFF);
         }
