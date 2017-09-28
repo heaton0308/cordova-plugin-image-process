@@ -214,7 +214,9 @@
 }
 //自动聚焦、曝光
 - (BOOL)resetFocusAndExposureModes{
-    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+
+
+    AVCaptureDevice *device = self.videoInput.device;
     AVCaptureExposureMode exposureMode = AVCaptureExposureModeContinuousAutoExposure;
     AVCaptureFocusMode focusMode = AVCaptureFocusModeContinuousAutoFocus;
     BOOL canResetFocus = [device isFocusPointOfInterestSupported] && [device isFocusModeSupported:focusMode];
@@ -247,19 +249,31 @@
 }
 //聚焦
 - (void)focusAtPoint:(CGPoint)point {
-    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
-    if ([self cameraSupportsTapToFocus] && [device isFocusModeSupported:AVCaptureFocusModeAutoFocus]) {
+    AVCaptureDevice *device = self.videoInput.device;
+    if ([self cameraSupportsTapToFocus] && [device isFocusModeSupported:AVCaptureFocusModeAutoFocus])
+    {
         NSError *error;
         if ([device lockForConfiguration:&error]) {
             device.focusPointOfInterest = point;
             device.focusMode = AVCaptureFocusModeAutoFocus;
             [device unlockForConfiguration];
         }
-        else{
-            NSLog(@"%@", error);
-
-        }
+        return error;
     }
+    return nil;
+//    AVCaptureDevice *device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+//    if ([self cameraSupportsTapToFocus] && [device isFocusModeSupported:AVCaptureFocusModeAutoFocus]) {
+//        NSError *error;
+//        if ([device lockForConfiguration:&error]) {
+//            device.focusPointOfInterest = point;
+//            device.focusMode = AVCaptureFocusModeAutoFocus;
+//            [device unlockForConfiguration];
+//        }
+//        else{
+//            NSLog(@"%@", error);
+//
+//        }
+//    }
 }
 
 - (BOOL)cameraSupportsTapToFocus {
