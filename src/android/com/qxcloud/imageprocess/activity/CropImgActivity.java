@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -47,7 +48,7 @@ public class CropImgActivity extends FragmentActivity implements View.OnClickLis
     private RelativeLayout layout_return;//返回
     private RelativeLayout layout_preservation;
     private RelativeLayout layout_rotate;
-    private String savedFilePath;
+    private String mSavedFilePath;
     private Activity activity;
     private ProgressDialog progressDialog;
 
@@ -87,7 +88,8 @@ public class CropImgActivity extends FragmentActivity implements View.OnClickLis
 
     private void checkPermission(){
         if(Build.VERSION.SDK_INT >= 23
-                && PermissionUtils.hasPermissions(this, NEED_PERMISSIONS)){
+                && !PermissionUtils.hasPermissions(this, NEED_PERMISSIONS)){
+            Logger.e("checkPermission");
             PermissionUtils.requestPermissions(this,101,NEED_PERMISSIONS);
         }else{
             initView();
@@ -99,6 +101,7 @@ public class CropImgActivity extends FragmentActivity implements View.OnClickLis
      * 初始化View
      */
     private void initView() {
+        Logger.e("initView");
         cropmageView = (CropImageView) findViewById(ResourceUtils.getIdByName(this,ResourceUtils.TYPE_ID,"cropmageView"));
         layout_return = (RelativeLayout) findViewById(ResourceUtils.getIdByName(this,ResourceUtils.TYPE_ID,"tv_return"));
         layout_preservation = (RelativeLayout) findViewById(ResourceUtils.getIdByName(this,ResourceUtils.TYPE_ID,"tv_preservation"));
@@ -107,7 +110,7 @@ public class CropImgActivity extends FragmentActivity implements View.OnClickLis
         layout_preservation.setOnClickListener(this);
         layout_rotate.setOnClickListener(this);
 //        图片保存地址
-        savedFilePath = getIntent().getStringExtra(ImageProcess.EXTRA_DEFAULT_SAVE_PATH);
+        mSavedFilePath = getIntent().getStringExtra(ImageProcess.EXTRA_DEFAULT_SAVE_PATH);
         handler.sendEmptyMessage(4);
         handler.sendEmptyMessageDelayed(2, 100);
     }
@@ -127,13 +130,20 @@ public class CropImgActivity extends FragmentActivity implements View.OnClickLis
         handler.sendEmptyMessage(1);
     }
 
+    private void reOpenCamera(){
+        Intent intent = new Intent(ImageProcess.ACTION_CAMERA);
+        intent.putExtra(ImageProcess.EXTRA_DEFAULT_SAVE_PATH, mSavedFilePath);
+        startActivity(intent);
+    }
+
     @Override
     public void onClick(View v) {
         int i = v.getId();
         if (i == ResourceUtils.getIdByName(this,ResourceUtils.TYPE_ID,"tv_return")) {
-            //返回
-            EditImageAPI.getInstance().post(2, new EditImageMessage(1));
-            finish();
+            //重拍
+            reOpenCamera();
+//            EditImageAPI.getInstance().post(2, new EditImageMessage(1));
+//            finish();
         } else if (i == ResourceUtils.getIdByName(this,ResourceUtils.TYPE_ID,"tv_preservation")) {
             //确定
             handler.sendEmptyMessage(0);
@@ -141,9 +151,9 @@ public class CropImgActivity extends FragmentActivity implements View.OnClickLis
                 Bitmap bitmap = cropmageView.getCroppedImage();
                 if (bitmap != null && !bitmap.isRecycled()) {
                     Logger.e("saved bitmap size = "+bitmap.getByteCount()/8/1024+"KB");
-                    boolean isSaved = MyBitmapFactory.saveBitmap(bitmap,savedFilePath);
+                    boolean isSaved = MyBitmapFactory.saveBitmap(bitmap,mSavedFilePath);
                     if(isSaved){
-                        File file = new File(savedFilePath);
+                        File file = new File(mSavedFilePath);
                         Logger.e("saved file size = "+file.length()/1024+"KB");
                         handler.sendEmptyMessageDelayed(1,500);
                         handler.postDelayed(new Runnable() {
@@ -190,6 +200,7 @@ public class CropImgActivity extends FragmentActivity implements View.OnClickLis
     };
 
     private void initBitMap() {
+        Logger.e("initBitMap");
         new Thread(new Runnable() {
             @Override
             public void run() {

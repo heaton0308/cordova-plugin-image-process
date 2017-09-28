@@ -643,6 +643,10 @@
                      target-dir="res/drawable-xxhdpi"/>
         <source-file src="src/android/res/drawable-xxhdpi/takepic_btn_takepic_pre.png"
                      target-dir="res/drawable-xxhdpi"/>
+        <source-file src="src/android/res/drawable-xxhdpi/marquee_btn_back_prebtn_rotate_normal_new.png"
+                     target-dir="res/drawable-xxhdpi"/>
+        <source-file src="src/android/res/drawable-xxhdpi/marquee_btn_retake_normal.png"
+                     target-dir="res/drawable-xxhdpi"/>
         <!--drawable-xxxhdpi-->
         <source-file src="src/android/res/drawable-xxxhdpi/marquee_btn_back_normal.png"
                      target-dir="res/drawable-xxxhdpi"/>

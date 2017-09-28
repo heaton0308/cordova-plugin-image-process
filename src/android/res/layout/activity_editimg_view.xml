@@ -13,30 +13,28 @@
         android:layout_alignParentTop="true">
 
         <RelativeLayout
-            android:id="@+id/tv_return"
+            android:id="@+id/tv_rotate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:padding="10dp">
 
+
+
             <ImageView
-                android:id="@+id/imageView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:src="@drawable/ic_left_selector" />
+                android:src="@drawable/marquee_btn_back_prebtn_rotate_normal_new" />
 
             <TextView
-                android:id="@+id/tv_one"
+                android:id="@+id/imageView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignTop="@+id/imageView4"
                 android:layout_centerHorizontal="true"
-                android:text="返回"
+                android:text="旋转"
                 android:textColor="@color/white"
                 android:textSize="16dp" />
-
-
         </RelativeLayout>
 
         <RelativeLayout
@@ -55,7 +53,7 @@
         </RelativeLayout>
 
         <RelativeLayout
-            android:id="@+id/tv_rotate"
+            android:id="@+id/tv_return"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -63,17 +61,19 @@
             android:padding="10dp">
 
             <ImageView
+                android:id="@+id/imageView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:src="@drawable/ic_rotate_selector" />
+                android:src="@drawable/marquee_btn_retake_normal" />
 
             <TextView
-                android:id="@+id/imageView5"
+                android:id="@+id/tv_one"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/imageView4"
                 android:layout_centerHorizontal="true"
-                android:text="旋转"
+                android:text="重拍"
                 android:textColor="@color/white"
                 android:textSize="16dp" />
 

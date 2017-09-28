@@ -27,17 +27,17 @@ import org.json.JSONException;
  * CREATED BY:         heaton
  * CREATED DATE:       2017/9/18
  * CREATED TIME:       下午5:52
- * CREATED DESCRIPTION: cordova 与 原生交互中转文件
+ * CREATED DESCRIPTION:
  */
 
 public class ImageProcess extends CordovaPlugin implements EditImgInterface{
 
-    private static final String ACTION_CAMERA = "com.qxcloud.imageprocess.activity.TakePhotoActivity";
-    private static final String ACTION_CROP = "com.qxcloud.imageprocess.activity.CropImgActivity";
-    private static final String ACTION_ALBUM = Intent.ACTION_PICK;
+    public static final String ACTION_CAMERA = "com.qxcloud.imageprocess.activity.TakePhotoActivity";
+    public static final String ACTION_CROP = "com.qxcloud.imageprocess.activity.CropImgActivity";
+    public static final String ACTION_ALBUM = Intent.ACTION_PICK;
 
-    private static final int REQUEST_ALBUM = 101;
-    private static final int HANDLER_WHAT_CROP = 101;
+    public static final int REQUEST_ALBUM = 101;
+    public static final int HANDLER_WHAT_CROP = 101;
 
     public static final String EXTRA_DEFAULT_SAVE_PATH = "default_save_path";
     public static final String EXTRA_DEFAULT_SELECT_PATH = "default_select_path";
