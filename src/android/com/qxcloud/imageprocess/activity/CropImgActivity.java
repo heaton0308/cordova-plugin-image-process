@@ -221,6 +221,7 @@ public class CropImgActivity extends FragmentActivity implements View.OnClickLis
                     } catch (Exception e) {
                         Logger.e("Exception = " + e.getLocalizedMessage());
                         e.printStackTrace();
+                        handler.sendEmptyMessage(1);
                         ToastUtils.toastMessage(CropImgActivity.this, "图片加载失败");
                     }
                 } else {
@@ -235,11 +236,13 @@ public class CropImgActivity extends FragmentActivity implements View.OnClickLis
                             message.obj = bitmap;
                             handler.sendMessageDelayed(message, 200);
                         } else {
+                            handler.sendEmptyMessage(1);
                             ToastUtils.toastMessage(CropImgActivity.this, "图片加载失败");
                         }
                     } catch (Exception e) {
                         Logger.e("Exception = " + e.getLocalizedMessage());
                         e.printStackTrace();
+                        handler.sendEmptyMessage(1);
                         ToastUtils.toastMessage(CropImgActivity.this, "图片加载失败");
                     }
                 }
