@@ -19,7 +19,8 @@
         </config-file>
         <config-file parent="/manifest/application" target="AndroidManifest.xml">
             <activity android:name="com.qxcloud.imageprocess.activity.TakePhotoActivity"
-                      android:screenOrientation="landscape">
+                      android:screenOrientation="landscape"
+                      android:launchMode="singleTask">
                 <intent-filter>
                     <action android:name="com.qxcloud.imageprocess.activity.TakePhotoActivity" />
 
@@ -27,7 +28,8 @@
                 </intent-filter>
             </activity>
             <activity android:name="com.qxcloud.imageprocess.activity.CropImgActivity"
-                      android:screenOrientation="landscape">
+                      android:screenOrientation="landscape"
+                      android:launchMode="singleTask">
                 <intent-filter>
                     <action android:name="com.qxcloud.imageprocess.activity.CropImgActivity" />
 

@@ -134,6 +134,7 @@ public class CropImgActivity extends FragmentActivity implements View.OnClickLis
         Intent intent = new Intent(ImageProcess.ACTION_CAMERA);
         intent.putExtra(ImageProcess.EXTRA_DEFAULT_SAVE_PATH, mSavedFilePath);
         startActivity(intent);
+        finish();
     }
 
     @Override
