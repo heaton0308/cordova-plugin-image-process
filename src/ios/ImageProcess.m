@@ -26,7 +26,14 @@
         
         [self.viewController presentViewController:nav animated:YES completion:nil];
     }else{
-        CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"暂无权限"];
+        //CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"暂无权限"];
+        //[self.commandDelegate sendPluginResult:pluginResult callbackId:self.callbackId];
+
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"没有相机权限" message:[NSString stringWithFormat:@"请检查相机权限"] delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil];
+        [alertView show];
+
+        //无相机权限
+        CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"-1"];
         [self.commandDelegate sendPluginResult:pluginResult callbackId:self.callbackId];
     }
     
@@ -93,7 +100,14 @@
         imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
         [self.viewController presentViewController:imagePickerController animated:YES completion:nil];
     }else{
-        CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"暂无相册权限"];
+//        CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"暂无相册权限"];
+//        [self.commandDelegate sendPluginResult:pluginResult callbackId:self.callbackId];
+
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:@"没有相册权限" message:[NSString stringWithFormat:@"请检查相册权限"] delegate:self cancelButtonTitle:@"知道了" otherButtonTitles:nil];
+        [alertView show];
+
+        //无相册权限
+        CDVPluginResult* pluginResult = [CDVPluginResult resultWithStatus:CDVCommandStatus_ERROR messageAsString:@"-2"];
         [self.commandDelegate sendPluginResult:pluginResult callbackId:self.callbackId];
     }
 }

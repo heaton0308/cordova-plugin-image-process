@@ -221,16 +221,16 @@
     AVCaptureFocusMode focusMode = AVCaptureFocusModeContinuousAutoFocus;
     BOOL canResetFocus = [device isFocusPointOfInterestSupported] && [device isFocusModeSupported:focusMode];
     BOOL canResetExposure = [device isExposurePointOfInterestSupported] && [device isExposureModeSupported:exposureMode];
-    CGPoint centerPoint = CGPointMake(0.5f, 0.5f);
+    //CGPoint centerPoint = CGPointMake(0.5f, 0.5f);
     NSError *error;
     if ([device lockForConfiguration:&error]) {
         if (canResetFocus) {
             device.focusMode = focusMode;
-            device.focusPointOfInterest = centerPoint;
+            //device.focusPointOfInterest = centerPoint;
         }
         if (canResetExposure) {
             device.exposureMode = exposureMode;
-            device.exposurePointOfInterest = centerPoint;
+            //device.exposurePointOfInterest = centerPoint;
         }
         [device unlockForConfiguration];
         return YES;
@@ -254,7 +254,7 @@
     {
         NSError *error;
         if ([device lockForConfiguration:&error]) {
-            device.focusPointOfInterest = point;
+            //device.focusPointOfInterest = point;
             device.focusMode = AVCaptureFocusModeAutoFocus;
             [device unlockForConfiguration];
         }

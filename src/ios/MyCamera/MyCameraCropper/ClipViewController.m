@@ -247,7 +247,9 @@
 
         NSLog(@"%@",imageFilePath);
 
-        SaveImage  = [SaveImage rotate:UIImageOrientationLeft];
+        if (self.flog != 10086) {
+            SaveImage  = [SaveImage rotate:UIImageOrientationLeft];
+        }
 //        BOOL success;
 //        NSData *data = [self compressOriginalImage:SaveImage toMaxDataSizeKBytes:200];
         NSData *data = [self compressOriginalImage:[self OriginImage:SaveImage scaleToSize:CGSizeMake(MAKE.size.height, MAKE.size.width)] toMaxDataSizeKBytes:195.0];
