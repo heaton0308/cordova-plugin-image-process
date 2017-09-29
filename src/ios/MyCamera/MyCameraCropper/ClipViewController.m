@@ -250,9 +250,30 @@
         if (self.flog != 10086) {
             SaveImage  = [SaveImage rotate:UIImageOrientationLeft];
         }
+
+        CGSize size = SaveImage.size;
+        CGFloat scale = 1.0;
+        //TODO:KScreenWidth屏幕宽
+        if (size.width > MAKE.size.width || size.height > MAKE.size.height) {
+            if (size.width > size.height) {
+               scale = MAKE.size.width / size.width;
+            }else {
+               scale = MAKE.size.height / size.height;
+            }
+        }
+        CGFloat widthx = size.width;
+        CGFloat heighty = size.height;
+        CGFloat scaledWidth = widthx * scale;
+        CGFloat scaledHeight = heighty * scale;
+        CGSize secSize =CGSizeMake(scaledWidth, scaledHeight);
+
+        SaveImage = [self OriginImage:SaveImage scaleToSize:secSize];
+
+        NSData *data = [self compressOriginalImage:SaveImage toMaxDataSizeKBytes:195.0];
+
 //        BOOL success;
 //        NSData *data = [self compressOriginalImage:SaveImage toMaxDataSizeKBytes:200];
-        NSData *data = [self compressOriginalImage:[self OriginImage:SaveImage scaleToSize:CGSizeMake(MAKE.size.height, MAKE.size.width)] toMaxDataSizeKBytes:195.0];
+//        NSData *data = [self compressOriginalImage:[self OriginImage:SaveImage scaleToSize:CGSizeMake(MAKE.size.height, MAKE.size.width)] toMaxDataSizeKBytes:195.0];
         BOOL success;
         NSLog(@"%lu",(unsigned long)data.length/1024);
         success = [data writeToFile:imageFilePath  atomically:YES];
