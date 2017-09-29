@@ -47,6 +47,7 @@ public class TakePhotoActivity extends FragmentActivity implements CameraBridgeV
     CameraView mOpenCvCameraView;
     private CheckBox photograph;//闪关灯
     private Handler handler = new Handler();
+    private String mAction;
 
     private BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(this) {
         @Override
@@ -92,7 +93,11 @@ public class TakePhotoActivity extends FragmentActivity implements CameraBridgeV
 
     private void initView() {
         setContentView(ResourceUtils.getIdByName(this, ResourceUtils.TYPE_LAYOUT, "activity_take_photo"));
+
+        mAction = getIntent().getStringExtra(ImageProcess.EXTRA_DEFAULT_METHOD_ACTION);
         savedPath = getIntent().getStringExtra(ImageProcess.EXTRA_DEFAULT_SAVE_PATH);
+
+        Logger.e("mAction --- "+mAction);
 
         mOpenCvCameraView = (CameraView) findViewById(ResourceUtils.getIdByName(this, ResourceUtils.TYPE_ID, "cameraPreview"));
 //        FocusView focusView = (FocusView) findViewById(R.id.view_focus);
@@ -168,8 +173,10 @@ public class TakePhotoActivity extends FragmentActivity implements CameraBridgeV
 
     @Override
     public void onSaved(byte[] data) {
+        Logger.e("mAction --- "+mAction);
         Intent intent = new Intent(this, CropImgActivity.class);
         intent.putExtra(ImageProcess.EXTRA_DEFAULT_SAVE_PATH, savedPath);
+        intent.putExtra(ImageProcess.EXTRA_DEFAULT_METHOD_ACTION, mAction);
         BitmapTransfer.transferBitmapData = data;
         startActivity(intent);
         finish();

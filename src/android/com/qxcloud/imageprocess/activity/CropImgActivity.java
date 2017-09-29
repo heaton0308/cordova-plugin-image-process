@@ -18,7 +18,9 @@ import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.qxcloud.imageprocess.ImageProcess;
 import com.qxcloud.imageprocess.ResourceUtils;
@@ -52,6 +54,7 @@ public class CropImgActivity extends FragmentActivity implements View.OnClickLis
     private String mSavedFilePath;
     private Activity activity;
     private ProgressDialog progressDialog;
+    private String mAction;
 
     public void showProgressDialog(String text) {
         if (progressDialog == null) {
@@ -102,7 +105,9 @@ public class CropImgActivity extends FragmentActivity implements View.OnClickLis
      * 初始化View
      */
     private void initView() {
-        Logger.e("initView");
+        mAction = getIntent().getStringExtra(ImageProcess.EXTRA_DEFAULT_METHOD_ACTION);
+
+        Logger.e("initView --- "+mAction);
         cropmageView = (CropImageView) findViewById(ResourceUtils.getIdByName(this, ResourceUtils.TYPE_ID, "cropmageView"));
         layout_return = (RelativeLayout) findViewById(ResourceUtils.getIdByName(this, ResourceUtils.TYPE_ID, "tv_return"));
         layout_preservation = (RelativeLayout) findViewById(ResourceUtils.getIdByName(this, ResourceUtils.TYPE_ID, "tv_preservation"));
@@ -110,6 +115,18 @@ public class CropImgActivity extends FragmentActivity implements View.OnClickLis
         layout_return.setOnClickListener(this);
         layout_preservation.setOnClickListener(this);
         layout_rotate.setOnClickListener(this);
+
+
+        ImageView cancelImg = (ImageView) findViewById(ResourceUtils.getIdByName(this, ResourceUtils.TYPE_ID, "imageView4"));
+        TextView cancelTv = (TextView) findViewById(ResourceUtils.getIdByName(this, ResourceUtils.TYPE_ID, "tv_one"));
+        if (ImageProcess.METHOD_OPEN_CROP.equals(mAction)) {
+            cancelImg.setVisibility(View.GONE);
+            cancelTv.setText("取消");
+        } else if (ImageProcess.METHOD_OPEN_CAMERA.equals(mAction)) {
+            cancelImg.setVisibility(View.VISIBLE);
+            cancelTv.setText("重拍");
+        }
+
 //        图片保存地址
         mSavedFilePath = getIntent().getStringExtra(ImageProcess.EXTRA_DEFAULT_SAVE_PATH);
         handler.sendEmptyMessage(4);
@@ -132,9 +149,15 @@ public class CropImgActivity extends FragmentActivity implements View.OnClickLis
     }
 
     private void reOpenCamera() {
-        Intent intent = new Intent(ImageProcess.ACTION_CAMERA);
-        intent.putExtra(ImageProcess.EXTRA_DEFAULT_SAVE_PATH, mSavedFilePath);
-        startActivity(intent);
+        Logger.e("mAction --- "+mAction);
+        if (ImageProcess.METHOD_OPEN_CAMERA.equals(mAction)) {
+            Intent intent = new Intent(this,TakePhotoActivity.class);
+            intent.putExtra(ImageProcess.EXTRA_DEFAULT_SAVE_PATH, mSavedFilePath);
+            intent.putExtra(ImageProcess.EXTRA_DEFAULT_METHOD_ACTION, mAction);
+            startActivity(intent);
+        }else if(ImageProcess.METHOD_OPEN_CROP.equals(mAction)){
+            EditImageAPI.getInstance().post(2, new EditImageMessage(1));
+        }
         finish();
     }
 

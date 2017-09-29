@@ -43,10 +43,11 @@ public class ImageProcess extends CordovaPlugin implements EditImgInterface{
 
     public static final String EXTRA_DEFAULT_SAVE_PATH = "default_save_path";
     public static final String EXTRA_DEFAULT_SELECT_PATH = "default_select_path";
-    private static final String METHOD_OPEN_CAMERA = "openCamera";
-    private static final String METHOD_OPEN_ALBUM = "openAlbum";
-    private static final String METHOD_OPEN_CROP = "openCrop";
+    public static final String METHOD_OPEN_CAMERA = "openCamera";
+    public static final String METHOD_OPEN_ALBUM = "openAlbum";
+    public static final String METHOD_OPEN_CROP = "openCrop";
 
+    public static final String EXTRA_DEFAULT_METHOD_ACTION = "method_action";
 
     private Handler handler = new Handler(){
         @Override
@@ -108,6 +109,7 @@ public class ImageProcess extends CordovaPlugin implements EditImgInterface{
     public void openCamera(){
         Intent intent = new Intent(ACTION_CAMERA);
         intent.putExtra(EXTRA_DEFAULT_SAVE_PATH, mSavedFilePath);
+        intent.putExtra(EXTRA_DEFAULT_METHOD_ACTION, mAction);
         this.cordova.startActivityForResult(this,intent,102);
     }
     public void openAlbum(){
@@ -127,6 +129,7 @@ public class ImageProcess extends CordovaPlugin implements EditImgInterface{
             Intent intent = new Intent(ACTION_CROP);
             intent.putExtra(EXTRA_DEFAULT_SAVE_PATH, mSavedFilePath);
             intent.putExtra(EXTRA_DEFAULT_SELECT_PATH,imagePath);
+            intent.putExtra(EXTRA_DEFAULT_METHOD_ACTION, mAction);
             this.cordova.startActivityForResult(this,intent,103);
         }
     }
@@ -135,6 +138,7 @@ public class ImageProcess extends CordovaPlugin implements EditImgInterface{
         Intent intent = new Intent(ACTION_CROP);
         intent.putExtra(EXTRA_DEFAULT_SAVE_PATH, mSavedFilePath);
         intent.putExtra(EXTRA_DEFAULT_SELECT_PATH,selectFilePath);
+        intent.putExtra(EXTRA_DEFAULT_METHOD_ACTION, mAction);
         this.cordova.startActivityForResult(this,intent,104);
     }
 
