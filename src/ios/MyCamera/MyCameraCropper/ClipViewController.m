@@ -184,10 +184,19 @@
 
     UIImageView *backImage2 = [[UIImageView alloc]initWithFrame:CGRectMake(2, (_closeButton.frame.size.width - 18)/2, 18, 18)];
     backImage2.image = [UIImage imageNamed:@"marquee_btn_retake_normal.png"];
+    if (self.flog != 10086) {
+        backImage2.hidden = NO;
+    }else{
+        backImage2.hidden = YES;
+     }
     [_closeButton addSubview:backImage2];
 
     UILabel *backLabel2 = [[UILabel alloc]initWithFrame:CGRectMake(backImage2.frame.origin.x + backImage2.frame.size.width, 0, 40, 50)];
-    backLabel2.text = @"重拍";
+    if (self.flog != 10086) {
+       backLabel2.text = @"重拍";
+    }else{
+       backLabel2.text = @"返回";
+    }
     backLabel2.textColor = [UIColor whiteColor];
     backLabel2.font = [UIFont systemFontOfSize:16];
     [_closeButton addSubview:backLabel2];
