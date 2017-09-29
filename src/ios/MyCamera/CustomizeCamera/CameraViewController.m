@@ -248,7 +248,7 @@
     [self focusAtPoint:point];
 }
 //聚焦
-- (void)focusAtPoint:(CGPoint)point {
+- (id)focusAtPoint:(CGPoint)point {
     AVCaptureDevice *device = self.videoInput.device;
     if ([self cameraSupportsTapToFocus] && [device isFocusModeSupported:AVCaptureFocusModeAutoFocus])
     {
