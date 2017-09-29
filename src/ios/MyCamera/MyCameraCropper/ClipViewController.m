@@ -184,10 +184,19 @@
 
     UIImageView *backImage2 = [[UIImageView alloc]initWithFrame:CGRectMake(2, (_closeButton.frame.size.width - 18)/2, 18, 18)];
     backImage2.image = [UIImage imageNamed:@"marquee_btn_retake_normal.png"];
+    if (self.flog != 10086) {
+        backImage2.hidden = NO;
+    }else{
+        backImage2.hidden = YES;
+     }
     [_closeButton addSubview:backImage2];
 
     UILabel *backLabel2 = [[UILabel alloc]initWithFrame:CGRectMake(backImage2.frame.origin.x + backImage2.frame.size.width, 0, 40, 50)];
-    backLabel2.text = @"重拍";
+    if (self.flog != 10086) {
+       backLabel2.text = @"重拍";
+    }else{
+       backLabel2.text = @"返回";
+    }
     backLabel2.textColor = [UIColor whiteColor];
     backLabel2.font = [UIFont systemFontOfSize:16];
     [_closeButton addSubview:backLabel2];
@@ -247,10 +256,33 @@
 
         NSLog(@"%@",imageFilePath);
 
-        SaveImage  = [SaveImage rotate:UIImageOrientationLeft];
+        if (self.flog != 10086) {
+            SaveImage  = [SaveImage rotate:UIImageOrientationLeft];
+        }
+
+        CGSize size = SaveImage.size;
+        CGFloat scale = 1.0;
+        //TODO:KScreenWidth屏幕宽
+        if (size.width > MAKE.size.width || size.height > MAKE.size.height) {
+            if (size.width > size.height) {
+               scale = MAKE.size.width / size.width;
+            }else {
+               scale = MAKE.size.height / size.height;
+            }
+        }
+        CGFloat widthx = size.width;
+        CGFloat heighty = size.height;
+        CGFloat scaledWidth = widthx * scale;
+        CGFloat scaledHeight = heighty * scale;
+        CGSize secSize =CGSizeMake(scaledWidth, scaledHeight);
+
+        SaveImage = [self OriginImage:SaveImage scaleToSize:secSize];
+
+        NSData *data = [self compressOriginalImage:SaveImage toMaxDataSizeKBytes:195.0];
+
 //        BOOL success;
 //        NSData *data = [self compressOriginalImage:SaveImage toMaxDataSizeKBytes:200];
-        NSData *data = [self compressOriginalImage:[self OriginImage:SaveImage scaleToSize:CGSizeMake(MAKE.size.height, MAKE.size.width)] toMaxDataSizeKBytes:195.0];
+//        NSData *data = [self compressOriginalImage:[self OriginImage:SaveImage scaleToSize:CGSizeMake(MAKE.size.height, MAKE.size.width)] toMaxDataSizeKBytes:195.0];
         BOOL success;
         NSLog(@"%lu",(unsigned long)data.length/1024);
         success = [data writeToFile:imageFilePath  atomically:YES];
