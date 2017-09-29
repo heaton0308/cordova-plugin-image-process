@@ -100,7 +100,7 @@ public class ImageProcess extends CordovaPlugin implements EditImgInterface{
             openAlbum();
         }else if(mAction.equals(METHOD_OPEN_CROP)){
             if(!TextUtils.isEmpty(mSelectFilePath)){
-                openCrop(mSelectFilePath);
+                openCrop(Uri.parse(mSelectFilePath));
             }
         }
     }
