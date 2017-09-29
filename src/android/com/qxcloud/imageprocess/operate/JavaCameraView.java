@@ -240,10 +240,14 @@ public class JavaCameraView extends CameraBridgeViewBase implements PreviewCallb
     protected void releaseCamera() {
         synchronized (this) {
             if (mCamera != null) {
-                mCamera.stopPreview();
-                mCamera.setPreviewCallback(null);
+                try {
+                    mCamera.stopPreview();
+                    mCamera.setPreviewCallback(null);
 
-                mCamera.release();
+                    mCamera.release();
+                }catch (Exception e){
+                    Logger.e("camera release exception "+e.getMessage());
+                }
             }
             mCamera = null;
             if (mFrameChain != null) {
