@@ -11,7 +11,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.animation.LinearInterpolator;
 
-public class FocusView extends View {
+public class FocusView extends View implements CameraView.FocusListener{
 
 	private Paint mLinePaint;
 	private int mBorderWidth = 4;
@@ -60,7 +60,10 @@ public class FocusView extends View {
 	private AnimatorSet animSet;
 	private ObjectAnimator fadeInOut;
 	private boolean isFocusing = false;
-	public void beginFocus() {
+	@Override
+	public void beginFocus(float x,float y) {
+		this.setX(x);
+		this.setY(y);
 		isFocusing = true;
 		if (animSet == null) {
 			ObjectAnimator scaleX = ObjectAnimator.ofFloat(this, "scaleX", 1f, 1.3f, 1f);
@@ -119,6 +122,7 @@ public class FocusView extends View {
 		animSet.start();
 	}
 
+	@Override
 	public boolean isFocusing() {
 		return isFocusing;
 	}

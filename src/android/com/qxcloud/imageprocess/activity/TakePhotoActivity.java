@@ -22,6 +22,7 @@ import com.qxcloud.imageprocess.ResourceUtils;
 import com.qxcloud.imageprocess.editAPI.EditImageAPI;
 import com.qxcloud.imageprocess.editAPI.EditImageMessage;
 import com.qxcloud.imageprocess.operate.CameraView;
+import com.qxcloud.imageprocess.operate.FocusView;
 import com.qxcloud.imageprocess.utils.Logger;
 import com.qxcloud.imageprocess.utils.PermissionUtils;
 
@@ -48,6 +49,7 @@ public class TakePhotoActivity extends FragmentActivity implements CameraBridgeV
     private CheckBox photograph;//闪关灯
     private Handler handler = new Handler();
     private String mAction;
+    private FocusView focusView;
 
     private BaseLoaderCallback mLoaderCallback = new BaseLoaderCallback(this) {
         @Override
@@ -100,8 +102,9 @@ public class TakePhotoActivity extends FragmentActivity implements CameraBridgeV
         Logger.e("mAction --- "+mAction);
 
         mOpenCvCameraView = (CameraView) findViewById(ResourceUtils.getIdByName(this, ResourceUtils.TYPE_ID, "cameraPreview"));
-//        FocusView focusView = (FocusView) findViewById(R.id.view_focus);
+        focusView = (FocusView) findViewById(ResourceUtils.getIdByName(this, ResourceUtils.TYPE_ID, "view_focus"));
 
+        mOpenCvCameraView.setFocusListener(focusView);
         mOpenCvCameraView.setVisibility(SurfaceView.VISIBLE);
 
         mOpenCvCameraView.setCvCameraViewListener(this);
