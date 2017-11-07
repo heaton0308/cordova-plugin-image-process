@@ -50,6 +50,7 @@ public class NewTackPhotoActivity extends FragmentActivity implements OnCaptureC
 
     private Activity activity;
     private String savedPath;
+    private String mAction;
     private static final String EXTRA_DEFAULT_SAVE_DIR = "default_save_dir";
 
     @Override
@@ -117,6 +118,7 @@ public class NewTackPhotoActivity extends FragmentActivity implements OnCaptureC
      */
     private void initView() {
         savedPath = getIntent().getStringExtra(ImageProcess.EXTRA_DEFAULT_SAVE_PATH);
+        mAction = getIntent().getStringExtra(ImageProcess.EXTRA_DEFAULT_METHOD_ACTION);
         Logger.e("+++++++++++mSavedDir+++++++++++" + savedPath);
         m_photographs = (CheckBox) findViewById(ResourceUtils.getIdByName(this, ResourceUtils.TYPE_ID,"photographs"));
         m_surfaceView = (MaskSurfaceView) findViewById(ResourceUtils.getIdByName(this, ResourceUtils.TYPE_ID,"surface_view"));
@@ -150,6 +152,7 @@ public class NewTackPhotoActivity extends FragmentActivity implements OnCaptureC
         } else {
             Intent intent = new Intent(this, CropImgActivity.class);
             intent.putExtra(ImageProcess.EXTRA_DEFAULT_SAVE_PATH, savedPath);
+            intent.putExtra(ImageProcess.EXTRA_DEFAULT_METHOD_ACTION, mAction);
             BitmapTransfer.transferBitmapData = data;
             startActivity(intent);
             finish();

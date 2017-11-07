@@ -25,6 +25,7 @@ import android.widget.TextView;
 import com.qxcloud.imageprocess.ImageProcess;
 import com.qxcloud.imageprocess.ResourceUtils;
 import com.qxcloud.imageprocess.ToastUtils;
+import com.qxcloud.imageprocess.activity.newCamera.NewTackPhotoActivity;
 import com.qxcloud.imageprocess.crop.CropImageType;
 import com.qxcloud.imageprocess.crop.CropImageView;
 import com.qxcloud.imageprocess.editAPI.EditImageAPI;
@@ -151,11 +152,13 @@ public class CropImgActivity extends FragmentActivity implements View.OnClickLis
     private void reOpenCamera() {
         Logger.e("mAction --- "+mAction);
         if (ImageProcess.METHOD_OPEN_CAMERA.equals(mAction)) {
-            Intent intent = new Intent(this,TakePhotoActivity.class);
+            Intent intent = new Intent(this,NewTackPhotoActivity.class);
             intent.putExtra(ImageProcess.EXTRA_DEFAULT_SAVE_PATH, mSavedFilePath);
             intent.putExtra(ImageProcess.EXTRA_DEFAULT_METHOD_ACTION, mAction);
             startActivity(intent);
         }else if(ImageProcess.METHOD_OPEN_CROP.equals(mAction)){
+            EditImageAPI.getInstance().post(2, new EditImageMessage(1));
+        }else if(ImageProcess.METHOD_OPEN_ALBUM.equals(mAction)){
             EditImageAPI.getInstance().post(2, new EditImageMessage(1));
         }
         finish();
