@@ -140,7 +140,7 @@ public class NewTackPhotoActivity extends Activity implements OnCaptureCallback,
                     break;
                 case 4:
                     //闪光灯
-                    boolean isChecked = (boolean) msg.obj;
+                    boolean isChecked = (Boolean) msg.obj;
                     CameraHelper.getInstance().setIsOpenFlashMode(isChecked);
                     break;
                 case 5:
