@@ -115,6 +115,7 @@ public class ImageProcess extends CordovaPlugin implements EditImgInterface{
     public void openAlbum(){
         Intent intent = new Intent(ACTION_ALBUM);
         intent.setDataAndType(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, "image/*");
+        intent.putExtra(EXTRA_DEFAULT_METHOD_ACTION, mAction);
         this.cordova.startActivityForResult(this,intent,REQUEST_ALBUM);
     }
 
