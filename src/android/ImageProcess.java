@@ -33,7 +33,7 @@ import java.io.File;
  */
 
 public class ImageProcess extends CordovaPlugin implements EditImgInterface{
-
+    private static final String ACTION_CAMERA_NEW = "com.qxcloud.imageprocess.activity.newCamera.NewTackPhotoActivity";
     public static final String ACTION_CAMERA = "com.qxcloud.imageprocess.activity.TakePhotoActivity";
     public static final String ACTION_CROP = "com.qxcloud.imageprocess.activity.CropImgActivity";
     public static final String ACTION_ALBUM = Intent.ACTION_PICK;
@@ -107,7 +107,7 @@ public class ImageProcess extends CordovaPlugin implements EditImgInterface{
     }
 
     public void openCamera(){
-        Intent intent = new Intent(ACTION_CAMERA);
+        Intent intent = new Intent(ACTION_CAMERA_NEW);
         intent.putExtra(EXTRA_DEFAULT_SAVE_PATH, mSavedFilePath);
         intent.putExtra(EXTRA_DEFAULT_METHOD_ACTION, mAction);
         this.cordova.startActivityForResult(this,intent,102);

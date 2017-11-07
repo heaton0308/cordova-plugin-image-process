@@ -16,6 +16,8 @@
             <uses-permission android:name="android.permission.CAMERA"/>
             <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
             <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+            <uses-feature android:name="android.hardware.camera" />
+            <uses-feature android:name="android.hardware.camera.autofocus" />
         </config-file>
         <config-file parent="/manifest/application" target="AndroidManifest.xml">
             <activity android:name="com.qxcloud.imageprocess.activity.TakePhotoActivity"
@@ -23,6 +25,15 @@
                       android:launchMode="singleTask">
                 <intent-filter>
                     <action android:name="com.qxcloud.imageprocess.activity.TakePhotoActivity" />
+
+                    <category android:name="android.intent.category.DEFAULT" />
+                </intent-filter>
+            </activity>
+            <activity android:name=".activity.newCamera.NewTackPhotoActivity"
+                      android:screenOrientation="landscape"
+                      android:launchMode="singleTask">
+                <intent-filter>
+                    <action android:name="com.qxcloud.imageprocess.activity.newCamera.NewTackPhotoActivity" />
 
                     <category android:name="android.intent.category.DEFAULT" />
                 </intent-filter>
@@ -50,6 +61,17 @@
                      target-dir="src/com/qxcloud/imageprocess/activity"/>
         <source-file src="src/android/com/qxcloud/imageprocess/activity/TakePhotoActivity.java"
                      target-dir="src/com/qxcloud/imageprocess/activity"/>
+        <!--activity newCamera-->
+        <source-file src="src/android/com/qxcloud/imageprocess/activity/newCamera/CameraHelper.java"
+                     target-dir="src/com/qxcloud/imageprocess/activity/newCamera"/>
+        <source-file src="src/android/com/qxcloud/imageprocess/activity/newCamera/CameraOpenCallBack.java"
+                     target-dir="src/com/qxcloud/imageprocess/activity/newCamera"/>
+        <source-file src="src/android/com/qxcloud/imageprocess/activity/newCamera/MaskSurfaceView.java"
+                     target-dir="src/com/qxcloud/imageprocess/activity/newCamera"/>
+        <source-file src="src/android/com/qxcloud/imageprocess/activity/newCamera/NewTackPhotoActivity.java"
+                     target-dir="src/com/qxcloud/imageprocess/activity/newCamera"/>
+        <source-file src="src/android/com/qxcloud/imageprocess/activity/newCamera/OnCaptureCallback.java"
+                     target-dir="src/com/qxcloud/imageprocess/activity/newCamera"/>
         <!--crop-->
         <source-file src="src/android/com/qxcloud/imageprocess/crop/AspectRatioUtil.java"
                      target-dir="src/com/qxcloud/imageprocess/crop"/>
@@ -680,6 +702,8 @@
         <source-file src="src/android/res/layout/activity_take_photo.xml"
                      target-dir="res/layout"/>
         <source-file src="src/android/res/layout/crop_image_view.xml"
+                     target-dir="res/layout"/>
+        <source-file src="src/android/res/layout/new_tackphoto_activity_view.xml"
                      target-dir="res/layout"/>
         <!--values-->
         <source-file src="src/android/res/values/attrs.xml"
