@@ -29,7 +29,7 @@
                     <category android:name="android.intent.category.DEFAULT" />
                 </intent-filter>
             </activity>
-            <activity android:name=".activity.newCamera.NewTackPhotoActivity"
+            <activity android:name="com.qxcloud.imageprocess.activity.newCamera.NewTackPhotoActivity"
                       android:screenOrientation="landscape"
                       android:launchMode="singleTask">
                 <intent-filter>
