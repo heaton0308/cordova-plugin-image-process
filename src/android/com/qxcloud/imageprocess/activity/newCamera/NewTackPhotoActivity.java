@@ -189,6 +189,7 @@ public class NewTackPhotoActivity extends FragmentActivity implements OnCaptureC
 //                    deleteFile();
 //                    CameraHelper.getInstance().startPreview();
                     //关闭
+                    EditImageAPI.getInstance().post(2, new EditImageMessage(1));
                     finish();
                     break;
                 case 3:
