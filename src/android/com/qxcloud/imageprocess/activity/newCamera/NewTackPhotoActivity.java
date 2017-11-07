@@ -1,10 +1,17 @@
 package com.qxcloud.imageprocess.activity.newCamera;
 
+import android.Manifest;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.support.annotation.NonNull;
+import android.support.v4.app.FragmentActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -16,18 +23,24 @@ import android.widget.Toast;
 
 import com.qxcloud.imageprocess.ImageProcess;
 import com.qxcloud.imageprocess.ResourceUtils;
-import com.qxcloud.imageprocess.ToastUtils;
 import com.qxcloud.imageprocess.activity.BitmapTransfer;
 import com.qxcloud.imageprocess.activity.CropImgActivity;
+import com.qxcloud.imageprocess.editAPI.EditImageAPI;
+import com.qxcloud.imageprocess.editAPI.EditImageMessage;
 import com.qxcloud.imageprocess.operate.FocusView;
 import com.qxcloud.imageprocess.utils.Logger;
+import com.qxcloud.imageprocess.utils.PermissionUtils;
 
 /**
  * Created by cfh on 2017-11-03.
  * 基于SurfaceView 进行自定义相机处理
  */
 
-public class NewTackPhotoActivity extends Activity implements OnCaptureCallback, View.OnClickListener {
+public class NewTackPhotoActivity extends FragmentActivity implements OnCaptureCallback, View.OnClickListener {
+    private static final String[] NEED_PERMISSIONS = {
+            Manifest.permission.CAMERA,
+            Manifest.permission.WRITE_EXTERNAL_STORAGE
+    };
     private CheckBox m_photographs;//闪光灯
     private MaskSurfaceView m_surfaceView;//相机
     private FocusView m_viewFocus;//聚焦
@@ -48,7 +61,49 @@ public class NewTackPhotoActivity extends Activity implements OnCaptureCallback,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         activity = this;
         setContentView(ResourceUtils.getIdByName(this, ResourceUtils.TYPE_LAYOUT,"new_tackphoto_activity_view"));
-        initView();
+        checkPermission();
+    }
+    private void checkPermission() {
+        if (Build.VERSION.SDK_INT >= 23 &&
+                !PermissionUtils.hasPermissions(
+                        this, NEED_PERMISSIONS)) {
+            PermissionUtils.requestPermissions(this,102,NEED_PERMISSIONS);
+        } else {
+            initView();
+        }
+    }
+
+    @Override
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (grantResults.length > 0) {
+            boolean isGranted = true;
+            for (int grantResult : grantResults) {
+                if (grantResult != PackageManager.PERMISSION_GRANTED) {
+                    isGranted = false;
+                    break;
+                }
+            }
+            Logger.e("isGranted === " + isGranted + " --- " + grantResults.length);
+            if (isGranted) {
+                initView();
+            } else {
+                new AlertDialog.Builder(this)
+                        .setMessage("此功能需要相机及存储权限，请前往设置打开")
+                        .setNegativeButton("确认", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        EditImageAPI.getInstance().post(1, new EditImageMessage(1));
+                                        finish();
+                                    }
+                                }, 1000);
+                            }
+                        })
+                        .show();
+            }
+        }
     }
 
     @Override
@@ -145,7 +200,21 @@ public class NewTackPhotoActivity extends Activity implements OnCaptureCallback,
                     break;
                 case 5:
                     //相机打开失败
-                    ToastUtils.toastMessage(activity,"相机打开失败");
+                    new AlertDialog.Builder(activity)
+                            .setMessage("相机打开失败，请检查是否打开相机及存储权限")
+                            .setNegativeButton("确认", new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialogInterface, int i) {
+                                    handler.postDelayed(new Runnable() {
+                                        @Override
+                                        public void run() {
+                                            EditImageAPI.getInstance().post(1, new EditImageMessage(1));
+                                            finish();
+                                        }
+                                    }, 1000);
+                                }
+                            })
+                            .show();
                     break;
                 case 6:
                     if (m_surfaceView != null) {
