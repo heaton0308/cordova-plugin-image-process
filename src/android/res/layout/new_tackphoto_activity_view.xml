@@ -9,7 +9,7 @@
         android:id="@+id/relativeLayout"
         android:layout_width="85dp"
         android:layout_height="match_parent"
-        android:background="@color/black_6"
+        android:background="#ff282828"
         android:padding="12dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
