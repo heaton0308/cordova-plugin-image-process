@@ -241,5 +241,10 @@ public class NewTackPhotoActivity extends FragmentActivity implements OnCaptureC
             handler.sendEmptyMessage(2);
         }
     }
+    @Override
+    public void onBackPressed() {
+        EditImageAPI.getInstance().post(2, new EditImageMessage(1));
+        super.onBackPressed();
+    }
 }
 
