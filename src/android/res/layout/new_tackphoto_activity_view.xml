@@ -77,6 +77,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
         android:text="将题目尽可能置于画面中间方框\n文字与参考线平行"
-        android:textColor="@color/white" />
+        android:textColor="@color/white"
+        android:background="@drawable/txst_prompt_bg"/>
 </RelativeLayout>
 

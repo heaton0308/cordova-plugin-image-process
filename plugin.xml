@@ -559,6 +559,8 @@
                      target-dir="res/drawable"/>
         <source-file src="src/android/res/drawable/ic_takephoto_btn.xml"
                      target-dir="res/drawable"/>
+        <source-file src="src/android/res/drawable/txst_prompt_bg.xml"
+                     target-dir="res/drawable"/>
         <!--res drawable-hdpi-->
         <source-file src="src/android/res/drawable-hdpi/crop_button.png"
                      target-dir="res/drawable-hdpi"/>

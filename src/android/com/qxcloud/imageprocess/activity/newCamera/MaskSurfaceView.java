@@ -7,6 +7,7 @@ import android.graphics.Paint;
 import android.graphics.Paint.Style;
 import android.graphics.PixelFormat;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.Display;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
@@ -49,12 +50,29 @@ public class MaskSurfaceView extends FrameLayout {
         init(context);
     }
 
+    @Override
+    protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
+        for (int i =0;i<getChildCount();i++){
+            View childView = getChildAt(i);
+            if(childView instanceof MSurfaceView){
+                Log.e("onLayout","surfaceView");
+                int width = childView.getMeasuredWidth();
+                int height = childView.getMeasuredHeight();
+                int v = (bottom - height)/2;
+                Log.e("onLayout","surfaceView width "+width+" height "+height+" top - "+top+" bottom - "+bottom+" v - "+v);
+                childView.layout(left,top+v,right,bottom-v);
+            }else{
+                childView.layout(left,top,right,bottom);
+            }
+        }
+    }
+
     private void init(Context context) {
         this.context=context;
         surfaceView = new MSurfaceView(context);
         imageView = new MaskView(context);
-        this.addView(surfaceView, LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
-        this.addView(imageView, LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT);
+        this.addView(surfaceView, LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
+        this.addView(imageView, LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT);
         Display display = ((WindowManager) context.getSystemService(Context.WINDOW_SERVICE)).getDefaultDisplay();
         screenHeight = display.getHeight();
         screenWidth = display.getWidth();
@@ -80,6 +98,13 @@ public class MaskSurfaceView extends FrameLayout {
             this.holder.setFormat(PixelFormat.TRANSPARENT);
             this.holder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
             this.holder.addCallback(this);
+        }
+
+        @Override
+        protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+            int width = getDefaultSize(getSuggestedMinimumWidth(), widthMeasureSpec);
+            int height = (int) (width/CameraHelper.MAX_ASPECT_RATIO);
+            setMeasuredDimension(width,height);
         }
 
         @Override

@@ -38,9 +38,12 @@ public class CameraHelper {
     private Camera camera;
     private MaskSurfaceView surfaceView;
 
-    //	分辨率
-    private Size resolution;
-
+    public static final float MAX_ASPECT_RATIO = (float) (Math.round((1920F / 1080F) * 100)) / 100;
+    ;
+    public static final int MAX_WIDTH = 1920;
+    public static final int MAX_HEIGHT = 1080;
+    public static final int MAX_WIDTH_HEIGHT_ASPECT = 10;
+    public static final float MAX_ASPECT = 0.05f;
     //	照片质量
     private int picQuality = 100;
 
@@ -297,6 +300,9 @@ public class CameraHelper {
      */
     private void initParameters(SurfaceHolder holder, int format, int width, int height, int screenWidth, int screenHeight) {
         try {
+
+            Log.e("cfh", "width - " + width + " height - " + height + " screenWidth - " + screenWidth + " screenHeight - " + screenHeight);
+
             Parameters p = this.camera.getParameters();
 
             this.camera.setPreviewDisplay(holder);
@@ -320,44 +326,44 @@ public class CameraHelper {
 
 //			设置最佳预览尺寸
             List<Size> previewSizes = p.getSupportedPreviewSizes();
-
-
-
-//			设置预览分辨率
-            if (this.resolution == null) {
-                this.resolution = this.getOptimalPreviewSize(previewSizes, width, height);
+            Size previewSize = this.getResultSizeByMaxWidthAndHeight(previewSizes, MAX_WIDTH, MAX_HEIGHT);
+            if (previewSize != null) {
+                Log.e("cfh", "previewSize == " + previewSize.width + "x" + previewSize.height);
+                p.setPreviewSize(previewSize.width, previewSize.height);
             }
-            try {
-                p.setPreviewSize(this.resolution.width, this.resolution.height);
-            } catch (Exception e) {
-                Log.e(TAG, "不支持的相机预览分辨率: " + this.resolution.width + " × " + this.resolution.height);
+
+            List<Size> pictureSizes = p.getSupportedPictureSizes();
+            Size pictureSize = this.getResultSizeByMaxWidthAndHeight(pictureSizes, MAX_WIDTH, MAX_HEIGHT);
+            if (pictureSize != null) {
+                Log.e("cfh", "pictureSize == " + pictureSize.width + "x" + pictureSize.height);
+                p.setPictureSize(pictureSize.width, pictureSize.height);
             }
 
 //            p.setPreviewSize(1920, 1080);
 
 //			设置照片尺寸
-            List<Size> pictureSizes = p.getSupportedPictureSizes();
-            if (this.pictureSize == null) {
-                this.setPicutreSize(pictureSizes, width, height);
-            }
-//            p.setPictureSize(1920, 1080);
-            if (pictureSizes.contains(resolution)) {
-                //包含尺寸
-                Log.e("cfh", "包含尺寸" + this.resolution.width + " X " + this.resolution.height);
-                try {
-                    p.setPictureSize(this.resolution.width, this.resolution.height);
-                } catch (Exception e) {
-                    Log.e(TAG, "不支持的照片尺寸: " + this.pictureSize.width + " × " + this.pictureSize.height);
-                }
-            } else {
-                //不包含尺寸
-                Log.e("cfh", "不包含尺寸" + this.pictureSize.width + " X " + this.pictureSize.height);
-                try {
-                    p.setPictureSize(this.pictureSize.width, this.pictureSize.height);
-                } catch (Exception e) {
-                    Log.e(TAG, "不支持的照片尺寸: " + this.pictureSize.width + " × " + this.pictureSize.height);
-                }
-            }
+
+//            if (this.pictureSize == null) {
+//                this.setPicutreSize(pictureSizes, width, height);
+//            }
+////            p.setPictureSize(1920, 1080);
+//            if (pictureSizes.contains(resolution)) {
+//                //包含尺寸
+//                Log.e("cfh", "包含尺寸" + this.resolution.width + " X " + this.resolution.height);
+//                try {
+//                    p.setPictureSize(this.resolution.width, this.resolution.height);
+//                } catch (Exception e) {
+//                    Log.e(TAG, "不支持的照片尺寸: " + this.pictureSize.width + " × " + this.pictureSize.height);
+//                }
+//            } else {
+//                //不包含尺寸
+//                Log.e("cfh", "不包含尺寸" + this.pictureSize.width + " X " + this.pictureSize.height);
+//                try {
+//                    p.setPictureSize(this.pictureSize.width, this.pictureSize.height);
+//                } catch (Exception e) {
+//                    Log.e(TAG, "不支持的照片尺寸: " + this.pictureSize.width + " × " + this.pictureSize.height);
+//                }
+//            }
             this.camera.setParameters(p);
         } catch (Exception e) {
             Log.e(TAG, "相机参数设置错误");
@@ -414,9 +420,9 @@ public class CameraHelper {
     }
 
 
-
     /**
      * 获取最佳预览尺寸
+     *
      * @param sizes  预览列表
      * @param width  SurfaceView宽度
      * @param height SurfaceView高度
@@ -450,6 +456,7 @@ public class CameraHelper {
             if (optimalSize == null) {
                 minDiff = Double.MAX_VALUE;
                 for (Size size : sizes) {
+                    Log.e("cfh", "-------supportedSize-------" + size.width + "x" + size.height);
                     if (Math.abs(size.height - targetHeight) < minDiff) {
                         optimalSize = size;
                         minDiff = Math.abs(size.height - targetHeight);
@@ -460,45 +467,51 @@ public class CameraHelper {
             return optimalSize;
         } catch (Exception e) {
             e.printStackTrace();
-            Log.e("cfh",e.toString());
+            Log.e("cfh", e.toString());
         }
         return optimalSize;
     }
 
     /**
      * 设置照片尺寸为最接近屏幕尺寸
-     * @param list           拍照尺寸列表
-     * @param width_
-     * @param height_
+     *
+     * @param list             拍照尺寸列表
+     * @param maxAllowedWidth
+     * @param maxAllowedHeight
      */
-    private void setPicutreSize(List<Size> list, int width_, int height_) {
+    private Size getResultSizeByMaxWidthAndHeight(List<Size> list, int maxAllowedWidth, int maxAllowedHeight) {
+        Size resultSize = null;
+        int caclWidth = 0;
+        int caclHeight = 0;
         try {
-            int calcWidth = 0;
-            int calcHeight = 0;
-
-            int maxAllowedWidth = this.resolution.width;//获取预览宽
-            int maxAllowedHeight = this.resolution.height;//获取预览高
-            Log.e("cfh", "**********预览图************:" + resolution.height + "X" + resolution.width);
-            float aspectRatio = (float) (Math.round(((float) maxAllowedWidth / (float) maxAllowedHeight) * 100)) / 100;//获取预览比例
-
             for (Size size : list) {
                 int width = size.width;//循环列表数据中的宽
                 int height = size.height;//循环列表数据中的高
                 float sizeAspectRatio = (float) (Math.round(((float) width / (float) height) * 100)) / 100;////循环列表数据中的比例
-                Log.e("cfh", "width -- " + width + " height = " + height + " sizeAspectRatio " + sizeAspectRatio + " aspectRatio = " + aspectRatio);
-                if (width <= maxAllowedWidth && height <= maxAllowedHeight) {
-                    if (width >= calcWidth && height >= calcHeight) {
-                        calcWidth = (int) width;
-                        calcHeight = (int) height;
-                        this.pictureSize = size;
-                        Log.e("cfh", "**********pictureSize*************:" + pictureSize.height + "X" + pictureSize.width);
+
+                int maxWidth = maxAllowedWidth + MAX_WIDTH_HEIGHT_ASPECT;
+                int maxHeight = maxAllowedHeight + MAX_WIDTH_HEIGHT_ASPECT;
+                float ratioDiff = Math.abs(sizeAspectRatio - MAX_ASPECT_RATIO);
+
+                Log.e("cfh", "list width - " + width + " height - " + height + " ratioDiff - " + ratioDiff);
+
+                if (ratioDiff <= MAX_ASPECT) {
+                    if (width <= maxWidth && height <= maxHeight) {
+                        if (width >= caclWidth && height >= caclHeight) {
+                            caclWidth = width;
+                            caclHeight = height;
+                            resultSize = size;
+                        }
                     }
                 }
+
+
             }
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-            Log.e("cfh",e.toString());
+            Log.e("cfh", e.toString());
         }
+        return resultSize;
     }
 }
 
