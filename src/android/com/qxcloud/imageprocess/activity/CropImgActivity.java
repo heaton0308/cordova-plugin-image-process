@@ -176,20 +176,25 @@ public class CropImgActivity extends FragmentActivity implements View.OnClickLis
             try {
                 Bitmap bitmap = cropmageView.getCroppedImage();
                 if (bitmap != null && !bitmap.isRecycled()) {
-                    Logger.e("saved bitmap size = " + bitmap.getByteCount() / 8 / 1024 + "KB");
-                    boolean isSaved = MyBitmapFactory.saveBitmap(bitmap, mSavedFilePath);
-                    if (isSaved) {
-                        File file = new File(mSavedFilePath);
-                        Logger.e("saved file size = " + file.length() / 1024 + "KB");
-                        handler.sendEmptyMessageDelayed(1, 500);
-                        handler.postDelayed(new Runnable() {
-                            @Override
-                            public void run() {
-                                EditImageAPI.getInstance().post(0, new EditImageMessage(0));
-                                finish();
+                    new Thread(){
+                        @Override
+                        public void run() {
+                            Logger.e("saved bitmap size = " + bitmap.getByteCount() / 8 / 1024 + "KB");
+                            boolean isSaved = MyBitmapFactory.saveBitmap(bitmap, mSavedFilePath);
+                            if (isSaved) {
+                                File file = new File(mSavedFilePath);
+                                Logger.e("saved file size = " + file.length() / 1024 + "KB");
+                                handler.sendEmptyMessageDelayed(1, 200);
+                                handler.postDelayed(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        EditImageAPI.getInstance().post(0, new EditImageMessage(0));
+                                        finish();
+                                    }
+                                }, 500);
                             }
-                        }, 500);
-                    }
+                        }
+                    }.start();
                 }
             } catch (Exception e) {
                 dismissProgressDialog();
