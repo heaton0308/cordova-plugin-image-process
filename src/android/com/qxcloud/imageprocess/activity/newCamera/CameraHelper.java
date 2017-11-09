@@ -376,6 +376,7 @@ public class CameraHelper {
     public void releaseCamera() {
         try {
             if (this.camera != null) {
+                this.flashlightStatus = Parameters.FLASH_MODE_OFF;
                 if (this.isPreviewing) {
                     this.camera.setPreviewCallback(null);
                     this.stopPreview();
