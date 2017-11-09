@@ -174,7 +174,7 @@ public class CropImgActivity extends FragmentActivity implements View.OnClickLis
             //确定
             handler.sendEmptyMessage(0);
             try {
-                Bitmap bitmap = cropmageView.getCroppedImage();
+                final Bitmap bitmap = cropmageView.getCroppedImage();
                 if (bitmap != null && !bitmap.isRecycled()) {
                     new Thread(){
                         @Override
