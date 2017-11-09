@@ -172,33 +172,8 @@ public class CropImgActivity extends FragmentActivity implements View.OnClickLis
 //            finish();
         } else if (i == ResourceUtils.getIdByName(this, ResourceUtils.TYPE_ID, "tv_preservation")) {
             //确定
-            handler.sendEmptyMessage(0);
-            try {
-                final Bitmap bitmap = cropmageView.getCroppedImage();
-                if (bitmap != null && !bitmap.isRecycled()) {
-                    new Thread(){
-                        @Override
-                        public void run() {
-                            Logger.e("saved bitmap size = " + bitmap.getByteCount() / 8 / 1024 + "KB");
-                            boolean isSaved = MyBitmapFactory.saveBitmap(bitmap, mSavedFilePath);
-                            if (isSaved) {
-                                File file = new File(mSavedFilePath);
-                                Logger.e("saved file size = " + file.length() / 1024 + "KB");
-                                handler.sendEmptyMessageDelayed(1, 200);
-                                handler.postDelayed(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        EditImageAPI.getInstance().post(0, new EditImageMessage(0));
-                                        finish();
-                                    }
-                                }, 500);
-                            }
-                        }
-                    }.start();
-                }
-            } catch (Exception e) {
-                dismissProgressDialog();
-            }
+            handler.sendEmptyMessage(5);
+
         } else if (i == ResourceUtils.getIdByName(this, ResourceUtils.TYPE_ID, "tv_rotate")) {
             cropmageView.rotateImage(-90);
         }
@@ -226,9 +201,52 @@ public class CropImgActivity extends FragmentActivity implements View.OnClickLis
                 case 4:
                     showProgressDialog("图片加载中");
                     break;
+                case 5:
+                    saveCropBitmap();
+                    break;
             }
         }
     };
+
+    private void saveCropBitmap() {
+        showProgressDialog("图片裁剪中");
+        layout_preservation.setEnabled(false);
+        try {
+//            BitmapTransfer.transferBitmap = cropmageView.getCroppedImage();
+//            Intent intent = new Intent(CropImgActivity.this, EditImgActivity.class);
+//            intent.putExtra("FILE_PATH", mSavedFilePath);
+//            startActivity(intent);
+//            Logger.e("文件处理成功");
+//            dismissProgressDialog();
+//            finish();
+            final Bitmap bitmap = cropmageView.getCroppedImage();
+            if (bitmap != null && !bitmap.isRecycled()) {
+                new Thread() {
+                    @Override
+                    public void run() {
+                        Logger.e("saved bitmap size = " + bitmap.getByteCount() / 8 / 1024 + "KB");
+                        boolean isSaved = MyBitmapFactory.saveBitmap(bitmap, mSavedFilePath);
+                        if (isSaved) {
+                            File file = new File(mSavedFilePath);
+                            Logger.e("saved file size = " + file.length() / 1024 + "KB");
+                            handler.postDelayed(new Runnable() {
+                                @Override
+                                public void run() {
+                                    dismissProgressDialog();
+                                    EditImageAPI.getInstance().post(0, new EditImageMessage(0));
+                                    finish();
+                                }
+                            }, 500);
+                        }
+                    }
+                }.start();
+            }
+        } catch (Exception e) {
+            dismissProgressDialog();
+            EditImageAPI.getInstance().post(2, new EditImageMessage(1));
+        }
+    }
+
 
     private void initBitMap() {
         Logger.e("initBitMap");
