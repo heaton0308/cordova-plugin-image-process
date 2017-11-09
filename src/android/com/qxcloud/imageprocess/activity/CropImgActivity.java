@@ -276,10 +276,11 @@ public class CropImgActivity extends FragmentActivity implements View.OnClickLis
 
     @Override
     protected void onDestroy() {
-        super.onDestroy();
+        dismissProgressDialog();
         BitmapTransfer.transferBitmap = null;
         BitmapTransfer.transferBitmapData = null;
         cropmageView = null;
+        super.onDestroy();
     }
 
     @Override
